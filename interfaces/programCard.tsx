@@ -1,7 +1,17 @@
 import Image from "next/image";
 import { Clock, BookOpen } from "lucide-react";
 
-export default function ProgramCard({ program }: any) {
+export default function ProgramCard({
+  program,
+}: {
+  program: {
+    image: string;
+    badge: string;
+    title: string;
+    duration: string;
+    credits: string;
+  };
+}) {
   return (
     <div className="group bg-[#F5F7FA] hover:bg-[#7A60FF] hover:text-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300 p-2.5 md:p-4 cursor-pointer">
       {/* image */}

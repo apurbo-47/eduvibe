@@ -8,20 +8,22 @@ export default function ProgramHero() {
       {/* LEFT SIDE */}
       <div className="pt-26 md:pt-32">
         <div
-          className="relative flex flex-col justify-center px-8 md:px-16 py-5 md:py-20 text-white 
-      bg-linear-to-br from-[#4B3F9B] to-[#2E2A74]"
+          className="relative flex flex-col justify-center px-5 md:px-16 py-5 md:py-20 text-white 
+      bg-linear-to-br from-[#372B73] to-[#372B73]"
         >
           {/* Grid background */}
           <div className="absolute inset-0 opacity-20 bg-[linear-gradient(#ffffff22_1px,transparent_1px),linear-gradient(90deg,#ffffff22_1px,transparent_1px)] bg-size-[40px_40px]" />
 
           <div className="relative z-10 max-w-xl">
-            <p className="text-sm mb-4 opacity-80">Program</p>
+            <p className="text-xl md:text-2xl mb-5 md:mb-8 font-serif">
+              Program
+            </p>
 
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Discover Our <br /> University Programs
+            <h1 className="text-2xl md:text-[54px] font-bold leading-tight mb-2.5 md:mb-5">
+              Discover Our University Programs
             </h1>
 
-            <p className="text-sm md:text-base opacity-80 mb-8">
+            <p className="text-xs md:text-base opacity-80 mb-4 md:mb-8">
               Our academic programs are carefully designed to combine strong
               theoretical foundations with practical learning experiences.
               Taught by experienced faculty and aligned with industry needs,
@@ -29,9 +31,9 @@ export default function ProgramHero() {
               confidence to succeed in a global environment.
             </p>
 
-            <button className="flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-medium hover:scale-105 transition">
+            <button className="flex items-center gap-3 md:text-lg text-sm bg-white text-black px-3 py-2 md:px-5 md:py-3 rounded-full font-medium hover:scale-105 transition cursor-pointer hover:bg-[#00A991] hover:text-white">
               Explore Program
-              <span className="bg-gray-200 p-2 rounded-full">
+              <span className=" p-1 md:p-2 rounded-full">
                 <ArrowUpRight size={16} />
               </span>
             </button>
@@ -43,7 +45,7 @@ export default function ProgramHero() {
             width={70}
             height={70}
             alt="icon"
-            className="absolute top-8 right-10 "
+            className="w-13 h-13 md:w-20 md:h-20 absolute top-0 right-2.5 md:top-8 md:right-10 "
           />
 
           <Image
@@ -51,7 +53,7 @@ export default function ProgramHero() {
             width={70}
             height={70}
             alt="icon"
-            className="absolute bottom-10 left-10 object-cover "
+            className="w-12 h12 md:w-20 md:h-20 absolute -bottom-20 right-6 md:bottom-0 md:left-20 object-cover "
           />
         </div>
       </div>
@@ -64,22 +66,26 @@ export default function ProgramHero() {
           width={520}
           height={520}
           alt="students"
-          className="w-full h-full relative  object-cover "
+          className="w-full h-full relative  object-fill "
+        />
+
+        <Image
+          src="/images/cap.png"
+          width={100}
+          height={100}
+          alt="icon"
+          className="w-16 h-16 md:w-32 md:h-32 absolute top-8 right-3 md:top-36 md:right-10 object-cover rotate-23 opacity-60 "
         />
 
         {/* Floating tag 1 */}
-        <div className="absolute top-36 left-10 bg-green-500 text-white text-sm px-4 py-1 rounded-full shadow-md">
+        <div className="absolute top-4  md:top-38 left-7 md:left-15 bg-[#00A991] text-white text-sm px-4 py-1 rounded-full shadow-md">
           Knowledge
         </div>
 
         {/* Floating tag 2 */}
-        <div className="absolute bottom-32 -left-12 bg-orange-500 text-white text-sm px-4 py-1 rounded-full shadow-md">
+        <div className="absolute bottom-0 -left-24 md:bottom-32 md:-left-12 bg-[#FF993F] text-white text-sm px-4 py-1 rounded-full shadow-md">
           Innovation
         </div>
-
-        {/* Decorative shapes */}
-        <div className="absolute w-16 h-16 bg-green-400 rounded-full blur-2xl top-40 left-20 opacity-50" />
-        <div className="absolute w-20 h-20 bg-purple-400 rounded-full blur-2xl bottom-40 right-20 opacity-40" />
       </div>
     </section>
   );
