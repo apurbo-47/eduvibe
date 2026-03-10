@@ -29,7 +29,17 @@ const faqData = [
   // Add more items as needed...
 ];
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => {
+const FAQItem = ({
+  question,
+  answer,
+  isOpen,
+  onClick,
+}: {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onClick: () => void;
+}) => {
   return (
     <div className="border-b border-gray-100 last:border-0">
       <button
