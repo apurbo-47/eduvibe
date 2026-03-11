@@ -4,6 +4,7 @@ import CampusSection from "@/components/shared/campusSection";
 import GallerySection from "@/components/shared/gallerySection";
 import HeroSection from "@/components/shared/heroSection";
 import UpcomingEvents from "@/components/shared/upcomingEvents";
+import VirtualTour from "@/components/shared/virtualTour";
 import React from "react";
 
 const CampusPage = () => {
@@ -11,6 +12,7 @@ const CampusPage = () => {
     <div>
       <CampusSection />
       <CampusJourney />
+      <VirtualTour />
       <GallerySection />
       <CampusLife />
       <UpcomingEvents />

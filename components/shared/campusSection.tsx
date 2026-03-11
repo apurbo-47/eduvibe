@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 
 export default function CampusSection() {
@@ -10,7 +9,7 @@ export default function CampusSection() {
         width={70}
         height={70}
         alt="icon"
-        className="w-13 h-13 md:w-20 md:h-20 absolute top-0 left-2.5 md:top-24 md:left-130 "
+        className="w-13 h-13 md:w-20 md:h-20 absolute top-24 left-2.5 md:top-24 md:left-130 "
       />
 
       <Image
@@ -19,6 +18,14 @@ export default function CampusSection() {
         height={70}
         alt="icon"
         className="w-12 h-12 md:w-20 md:h-20 absolute -bottom-5  left-20 object-cover "
+      />
+
+      <Image
+        src="/images/cap.png"
+        width={70}
+        height={70}
+        alt="icon"
+        className="w-16 h-16 md:w-32 md:h-32 absolute opacity-70 top-24 right-5 md:top-32 md:right-10 object-cover rotate-23 "
       />
 
       {/* grid background */}
