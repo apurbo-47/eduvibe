@@ -47,9 +47,12 @@ export default function Navbar() {
               <button className="h-9 w-9 rounded-full border flex items-center justify-center">
                 <FaUser />
               </button>
-              <button className="rounded-[54px] cursor-pointer bg-[#7A60FF] px-5 py-4 text-sm text-white hover:bg-indigo-700">
+              <Link
+                href="/contact"
+                className="rounded-[54px] cursor-pointer bg-[#7A60FF] px-5 py-4 text-sm text-white hover:bg-indigo-700"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}

@@ -9,7 +9,7 @@ const HeroSection = () => {
 
         {/* floating shapes */}
         <Image
-          src="/images/scholarship.png"
+          src="/images/cap.png"
           alt="cap"
           width={70}
           height={70}

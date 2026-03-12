@@ -5,7 +5,7 @@ export default function CampusSection() {
     <section className="relative w-full bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
       {/* Decorative book icons */}
       <Image
-        src="/images/books.png"
+        src="/images/diary.png"
         width={70}
         height={70}
         alt="icon"
@@ -13,7 +13,7 @@ export default function CampusSection() {
       />
 
       <Image
-        src="/images/books.png"
+        src="/images/diary.png"
         width={70}
         height={70}
         alt="icon"

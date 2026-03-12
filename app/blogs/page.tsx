@@ -1,17 +1,14 @@
-// import TestCard from "@/components/testCard";
+import BlogHero from "@/components/hero/BlogHero";
+import FAQSection from "@/components/shared/faqSection";
+import LatestNews from "@/components/shared/latestNews";
 import React from "react";
 
 const BlogPage = () => {
   return (
     <div>
-      {/* <TestCard
-        followerCount={100}
-        name="Jahed"
-        isActive
-        isPro
-        website="this is our website"
-      /> */}
-      <h1>Hello Blogs</h1>
+      <BlogHero />
+      <LatestNews />
+      <FAQSection />
     </div>
   );
 };
