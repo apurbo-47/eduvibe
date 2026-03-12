@@ -153,21 +153,21 @@ const BlogDetailsSection = () => {
           <div className="flex space-x-3">
             <Link
               href="#"
-              className="p-2 rounded-full border border-white/20 hover:bg-white/10"
+              className="p-2 rounded-full border border-black hover:bg-black hover:text-white"
             >
-              <Youtube size={16} />
+              <Youtube size={24} />
             </Link>
             <Link
               href="#"
-              className="p-2 rounded-full border border-white/20 hover:bg-white/10"
+              className="p-2 rounded-full border border-black hover:bg-black hover:text-white"
             >
-              <Instagram size={16} />
+              <Instagram size={24} />
             </Link>
             <Link
               href="#"
-              className="p-2 rounded-full border border-white/20 hover:bg-white/10"
+              className="p-2 rounded-full border border-black hover:bg-black hover:text-white"
             >
-              <Facebook size={16} />
+              <Facebook size={24} />
             </Link>
           </div>
         </div>

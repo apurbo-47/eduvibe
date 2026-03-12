@@ -4,7 +4,8 @@ import HeroSection from "@/components/shared/heroSection";
 
 import React from "react";
 
-const BlogDetails = () => {
+const BlogDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const resolvedParams = await params;
   return (
     <div>
       <BlogIDHero />
