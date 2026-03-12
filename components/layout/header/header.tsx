@@ -76,9 +76,12 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <button className="rounded-full bg-indigo-600 py-2 text-white">
+              <Link
+                href="/contact"
+                className="rounded-full bg-indigo-600 py-2 text-white"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
         )}
