@@ -78,7 +78,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="rounded-full bg-indigo-600 py-2 text-white"
+                className="rounded-full bg-indigo-600 py-2 text-white text-center"
               >
                 Contact Us
               </Link>
