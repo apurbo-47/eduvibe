@@ -1,5 +1,6 @@
 import { News } from "@/interfaces/news.interface";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BlogCard = ({ data }: { data: News }) => {
@@ -30,9 +31,12 @@ const BlogCard = ({ data }: { data: News }) => {
       </h3>
 
       {/* Link */}
-      <button className="text-sm font-medium mt-1.5 md:mt-3 cursor-pointer underline">
-        Read More News
-      </button>
+      <Link
+        href={`/blogs/${data.id}`}
+        className="text-sm font-medium mt-1.5 md:mt-3 cursor-pointer underline"
+      >
+        {data.read}
+      </Link>
     </div>
   );
 };

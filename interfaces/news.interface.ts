@@ -4,4 +4,5 @@ export type News = {
   date: string;
   author: string;
   title: string;
+  read: string;
 };

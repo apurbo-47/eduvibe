@@ -8,6 +8,7 @@ export const newsData: News[] = [
     author: "Emily Carter",
     title:
       "University Researchers Introduce Innovative Green Infrastructure for Future Smart Cities",
+    read: " Read More News",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const newsData: News[] = [
     author: "Michael Tan",
     title:
       "Engineering Students Develop Low-Cost Solar Technology to Support Rural Communities",
+    read: " Read More News",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export const newsData: News[] = [
     author: "Sophia Martinez",
     title:
       "International Tech Conference Highlights Breakthroughs in Artificial Intelligence and Robotics",
+    read: " Read More News",
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ export const newsData: News[] = [
     author: "Daniel Kim",
     title:
       "Modern Learning Spaces Transform Campus Libraries into Collaborative Innovation Hubs",
+    read: " Read More News",
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ export const newsData: News[] = [
     author: "Olivia Bennett",
     title:
       "New Sustainability Program Encourages Students to Lead Environmental Research Projects",
+    read: " Read More News",
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ export const newsData: News[] = [
     author: "James Walker",
     title:
       "Faculty of Technology Launches Startup Incubator to Support Student Entrepreneurs",
+    read: " Read More News",
   },
   {
     id: 7,
@@ -56,6 +62,7 @@ export const newsData: News[] = [
     author: "Aisha Rahman",
     title:
       "Global Partnership Initiative Opens Opportunities for International Student Exchange",
+    read: " Read More News",
   },
   {
     id: 8,
@@ -64,6 +71,7 @@ export const newsData: News[] = [
     author: "Lucas Anderson",
     title:
       "Campus Innovation Lab Showcases Student-Built Prototypes for Smart Transportation",
+    read: " Read More News",
   },
   {
     id: 9,
@@ -72,5 +80,6 @@ export const newsData: News[] = [
     author: "Isabella Rossi",
     title:
       "University Research Team Discovers New Methods for Climate-Resilient Urban Planning",
+    read: " Read More News",
   },
 ];
