@@ -17,12 +17,12 @@ const VirtualTour = () => {
   return (
     <div>
       <div className="lg:p-20 p-5">
-        <div className="flex justify-between items-center gap-3 md:gap-8">
+        <div className="max-w-7xl mx-auto flex justify-between items-center gap-3 md:gap-8">
           <h1 className="text-xl lg:text-4xl font-bold">Virtual Tour</h1>
           <div className="w-48 md:w-full max-w-4xl mx-auto h-0.5 bg-linear-to-r from-white to-[#7A60FF]"></div>
         </div>
 
-        <div className=" pt-5 md:pt-13 ">
+        <div className=" max-w-7xl mx-auto pt-5 md:pt-13 ">
           <div className="flex flex-col md:flex-row items-center justify-between gap-2.5 md:gap-5">
             {videos.map((video, index) => (
               <div

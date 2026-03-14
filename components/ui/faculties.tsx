@@ -73,9 +73,9 @@ export default function Faculties() {
                 <Image
                   src={item.img}
                   alt={item.title}
-                  width={200}
-                  height={100}
-                  className="w-full h-20 md:h-30 object-contain "
+                  width={500}
+                  height={140}
+                  className="w-full  h-20 md:h-40 object-contain "
                 />
               </div>
               <p className="text-xs md:text-sm text-[#4C4C4C]">{item.desc}</p>

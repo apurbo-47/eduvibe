@@ -8,13 +8,13 @@ export default function ProgramHero() {
       {/* LEFT SIDE */}
       <div className="pt-26 md:pt-32">
         <div
-          className="relative flex flex-col justify-center px-5 md:px-16 py-5 md:py-20 text-white 
+          className="relative flex flex-col justify-center w-full h-full text-white 
       bg-linear-to-br from-[#372B73] to-[#372B73]"
         >
           {/* Grid background */}
           <div className="absolute inset-0 opacity-20 bg-[linear-gradient(#ffffff22_1px,transparent_1px),linear-gradient(90deg,#ffffff22_1px,transparent_1px)] bg-size-[40px_40px]" />
 
-          <div className="relative z-10 max-w-xl">
+          <div className="relative z-10 max-w-2xl p-5 md:p-16 ">
             <p className="text-xl md:text-2xl mb-5 md:mb-8 font-serif">
               Program
             </p>
@@ -41,16 +41,16 @@ export default function ProgramHero() {
 
           {/* Decorative book icons */}
           <Image
-            src="/images/books.png"
-            width={70}
+            src="/images/d.png"
+            width={100}
             height={70}
             alt="icon"
             className="w-13 h-13 md:w-20 md:h-20 absolute top-0 right-2.5 md:top-8 md:right-10 "
           />
 
           <Image
-            src="/images/books.png"
-            width={70}
+            src="/images/d.png"
+            width={100}
             height={70}
             alt="icon"
             className="w-12 h12 md:w-20 md:h-20 absolute -bottom-20 right-6 md:bottom-0 md:left-20 object-cover "
@@ -74,7 +74,7 @@ export default function ProgramHero() {
           width={100}
           height={100}
           alt="icon"
-          className="w-16 h-16 md:w-32 md:h-32 absolute top-8 right-3 md:top-36 md:right-10 object-cover rotate-23 opacity-60 "
+          className="w-16 h-16 md:w-32 md:h-32 absolute top-8 right-3 md:top-34 md:right-10 object-cover rotate-23 opacity-70 "
         />
 
         {/* Floating tag 1 */}

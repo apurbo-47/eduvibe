@@ -80,7 +80,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="max-w-7xl mx-auto px-5 py-10 md:py-0 flex flex-col lg:flex-row gap-5 md:gap-10 items-center">
+    <section className="w-full max-w-7xl mx-auto px-5 md:px-10 py-10 md:py-0 flex flex-col lg:flex-row gap-5 md:gap-10 items-center">
       {/* Left Content: FAQ Accordion */}
       <div className="w-full lg:w-1/2">
         <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-3 md:mb-10 leading-[1.1]">
@@ -110,7 +110,7 @@ export default function FAQSection() {
             alt="University Campus"
             width={500}
             height={500}
-            className="w-full h-auto object-cover md:min-h-screen"
+            className="w-full h-full object-cover "
           />
         </div>
         {/* Subtle purple glow effect similar to the image */}

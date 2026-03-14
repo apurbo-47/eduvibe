@@ -36,9 +36,9 @@ const AboutSection = () => {
           <Image
             src="/images/cap.png"
             alt="graduation cap"
-            width={24}
+            width={100}
             height={24}
-            className="w-28 h-28 object-contain"
+            className="w-28 h-28 object-contain opacity-70"
           />
         </div>
 

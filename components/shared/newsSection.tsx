@@ -133,7 +133,7 @@ export default function NewsSection() {
                 <span>{item.author}</span>
               </div>
 
-              <h3 className="mt-2 md:mt-4 text-sm md:text-lg font-semibold">
+              <h3 className="mt-2 md:mt-4 text-sm md:text-lg font-medium">
                 {item.title}
               </h3>
 

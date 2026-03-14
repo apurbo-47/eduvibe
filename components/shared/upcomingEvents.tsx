@@ -66,28 +66,28 @@ export default function UpcomingEvents() {
   return (
     <section className="relative py-6 md:py-20 overflow-hidden m-2 md:m-0 ">
       {/* Background Decorative Elements */}
-      <div className="absolute lg;top-40 left-0 hidden md:block">
+      <div className="absolute top-7 -left-2 lg:top-40 lg:left-0 ">
         <Image
           src="/images/b.png"
           alt="books"
-          width={28}
-          height={28}
-          className="w-32 h-32 object-contain"
+          width={100}
+          height={100}
+          className="w-16 h-16 md:w-32 md:h-32 object-contain opacity-70"
         />
       </div>
-      <div className="absolute top-20 right-30 rotate-23 hidden md:block">
+      <div className="absolute top-5 right-0 md:top-20 md:right-30 rotate-23 ">
         <Image
           src="/images/cap.png"
           alt="graduation cap"
-          width={24}
-          height={24}
-          className="w-28 h-28 object-contain"
+          width={100}
+          height={100}
+          className="w-16 h-16 md:w-28 md:h-28 object-contain opacity-70"
         />
       </div>
 
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-10 md:mb-16 m-3">
+        <div className="text-center mb-10 md:mb-16 m-3 ">
           <h2 className="text-2xl md:text-4xl font-bold">
             {" "}
             <span className="relative inline-block">
@@ -126,8 +126,8 @@ export default function UpcomingEvents() {
               return (
                 <div
                   key={event.id}
-                  className={`transition-all duration-500 
-                  ${isCenter ? "w-[320px] scale-100" : "w-45  scale-90"}
+                  className={`
+                  ${isCenter ? "w-[320px] scale-100" : "w-45 scale-90 "}
                   `}
                 >
                   <div className="relative h-65 overflow-hidden">
@@ -135,7 +135,7 @@ export default function UpcomingEvents() {
                       src={event.img}
                       alt="image"
                       fill
-                      className="object-cover"
+                      className="object-cover rounded-xl md:rounded-2xl"
                     />
                   </div>
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CampusSection() {
   return (
-    <section className="relative w-full bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
+    <section className="relative w-full  bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
       {/* Decorative book icons */}
       <Image
         src="/images/diary.png"
@@ -14,7 +14,7 @@ export default function CampusSection() {
 
       <Image
         src="/images/diary.png"
-        width={70}
+        width={100}
         height={70}
         alt="icon"
         className="w-12 h-12 md:w-20 md:h-20 absolute -bottom-5  left-20 object-cover "
@@ -22,7 +22,7 @@ export default function CampusSection() {
 
       <Image
         src="/images/cap.png"
-        width={70}
+        width={100}
         height={70}
         alt="icon"
         className="w-16 h-16 md:w-32 md:h-32 absolute opacity-70 top-24 right-5 md:top-32 md:right-10 object-cover rotate-23 "

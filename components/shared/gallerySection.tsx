@@ -38,22 +38,22 @@ const GallerySection = () => {
   return (
     <section className="relative bg-[#7A60FF] py-8 md:py-20 px-5 md:px-0 overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-10 left-10 hidden md:block">
+      <div className="absolute -top-3 md:top-10 -left-2 md:left-10 ">
         <Image
-          src="/images/book.png"
+          src="/images/b.png"
           alt="books"
-          width={28}
+          width={100}
           height={28}
-          className="w-32 h-32 object-contain"
+          className="md:w-32 w-16 h-16 md:h-32  object-contain opacity-90"
         />
       </div>
-      <div className="absolute top-10 right-10  hidden md:block">
+      <div className="absolute top-12 md:top-10 right-0 md:right-10 ">
         <Image
-          src="/images/scholarship.png"
+          src="/images/cap.png"
           alt="graduation cap"
-          width={24}
+          width={100}
           height={24}
-          className="w-24 h-24 object-contain"
+          className="md:w-32 w-16 h-16 md:h-32 object-contain rotate-23 opacity-70"
         />
       </div>
 

@@ -3,9 +3,9 @@ import React from "react";
 
 const FacilitiesCard = () => {
   return (
-    <div className="w-full px-5 py-10 md:p-20 bg-[#F5F7FA] ">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 md:gap-5  ">
-        <div className="order-3 md:order-1 border border-white rounded-3xl bg-white p-2.5 md:p-5">
+    <div className="w-full  px-5 py-10 md:p-20 bg-[#F5F7FA] ">
+      <div className="max-w-7xl mx-auto grid grid-cols-2  lg:grid-cols-4 gap-2.5 md:gap-5  ">
+        <div className="order-3 lg:order-1 border border-white rounded-3xl bg-white p-2.5 md:p-5">
           <h3 className="text-sm md:text-xl font-bold mb-2.5 md:mb-5">
             Academic Excellence
           </h3>
@@ -24,7 +24,7 @@ const FacilitiesCard = () => {
           </p>
         </div>
 
-        <div className="order-1 col-span-2 md:order-2 text-center max-w-lg mx-auto ">
+        <div className="order-1 col-span-2 lg:order-2 text-center max-w-lg mx-auto ">
           <h1 className="text-2xl md:text-4xl font-semibold mb-3 md:mb-6">
             Why {""}
             <span className="relative inline-block">
@@ -50,7 +50,7 @@ const FacilitiesCard = () => {
           </button>
         </div>
 
-        <div className="order-4 md:order-4 border border-white rounded-3xl bg-white p-2.5 md:p-5">
+        <div className="order-4 lg:order-4 border border-white rounded-3xl bg-white p-2.5 md:p-5">
           <h3 className="text-sm md:text-xl font-bold mb-2.5 md:mb-5">
             Global Learning Hub
           </h3>
@@ -69,7 +69,7 @@ const FacilitiesCard = () => {
           </p>
         </div>
 
-        <div className="order-5 md:order-5 border border-white rounded-3xl bg-white p-1.5 md:p-2.5 ">
+        <div className="order-5 lg:order-5 border border-white rounded-3xl bg-white p-1.5 md:p-2.5 ">
           <div className="flex">
             <button className="border border-[#4B5563] py-1 px-1 md:py-2 md:px-4 -rotate-17 md:-rotate-15 rounded-full mt-8 md:mt-10 text-xs md:text-sm text-[#1F2A37]">
               Personalized Plan
@@ -98,7 +98,7 @@ const FacilitiesCard = () => {
           </div>
         </div>
 
-        <div className="order-6 md:order-6 border border-white rounded-3xl bg-white p-2.5 md:p-5">
+        <div className="order-6 lg:order-6 border border-white rounded-3xl bg-white p-2.5 md:p-5">
           <h3 className="text-sm md:text-xl font-bold mb-2.5 md:mb-5">
             World Class Faculty
           </h3>
@@ -117,7 +117,7 @@ const FacilitiesCard = () => {
           </p>
         </div>
 
-        <div className="order-7 md:order-7 border border-white rounded-3xl bg-white p-2.5 md:p-5">
+        <div className="order-7 lg:order-7 border border-white rounded-3xl bg-white p-2.5 md:p-5">
           <h3 className="text-sm md:text-xl font-bold mb-2.5 md:mb-5">
             Global Learning Hub
           </h3>
@@ -135,7 +135,7 @@ const FacilitiesCard = () => {
             prepare future leaders.
           </p>
         </div>
-        <div className="order-8 md:order-8 border border-white rounded-3xl bg-white p-1.5 md:p-2.5 ">
+        <div className="order-8 lg:order-8 border border-white rounded-3xl bg-white p-1.5 md:p-2.5 ">
           <div className="flex">
             <button className="border border-[#4B5563] py-1 px-1 md:py-2 md:px-4 -rotate-17 md:-rotate-15 rounded-full mt-8 md:mt-10 text-xs md:text-sm text-[#1F2A37]">
               Personalized Plan

@@ -5,7 +5,7 @@ import logo from "../../../public/images/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-linear-to-br from-black via-[#0f0f1a] to-[#1b1b3a] text-white">
+    <footer className="relative  bg-linear-to-br from-black via-[#0f0f1a] to-[#1b1b3a] text-white">
       {/* Grid overlay (subtle) */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[40px_40px]" />
 

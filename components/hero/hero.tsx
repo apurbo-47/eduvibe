@@ -1,6 +1,7 @@
 import Image from "next/image";
 import FloatingShapes from "./floatingShapes";
 import { assets } from "@/assets";
+import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -41,15 +42,18 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <div className="mt-10 -mb-46 md:-mb-50 flex justify-center">
-          <button className="flex h-20 w-20 md:h-28 md:w-28 flex-col items-center justify-center  border-4 rounded-full bg-[#6C63FF] text-xs md:text-lg font-semibold text-white shadow-xl transition hover:scale-105 hover:bg-[#7A60FF]">
+        <div className="mt-10 -mb-48 md:-mb-52 flex justify-center">
+          <button className="flex h-24 w-24 md:h-36 md:w-36 flex-col items-center justify-center  border-4 rounded-full bg-[#6C63FF] text-xs md:text-lg font-semibold text-white shadow-xl transition hover:scale-105 hover:bg-[#7A60FF]">
+            <span className="mb-2 md:mb-4">
+              <ArrowDown size={28} />
+            </span>
             Explore University
           </button>
         </div>
       </div>
 
       {/* Image */}
-      <div className="relative h-60 md:h-140 w-full mx-auto">
+      <div className="relative h-70 md:h-screen w-full mx-auto">
         <Image
           src={assets.university}
           alt="University"

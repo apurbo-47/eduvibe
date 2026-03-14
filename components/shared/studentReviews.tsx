@@ -42,8 +42,14 @@ const reviews = [
 
 const ReviewCard = ({ review }: { review: (typeof reviews)[0] }) => (
   <div className="flex items-center gap-4 bg-[#F5F7FA] backdrop-blur-md border border-[#F5F7FA] p-4 rounded-full md:max-w-7xl md:mx-auto ">
-    <div className="relative w-15 h-15 md:w-30 md:h-30 ">
-      <Image src={review.img} alt={review.name} fill className="rounded-full" />
+    <div className=" ">
+      <Image
+        src={review.img}
+        alt={review.name}
+        width={100}
+        height={50}
+        className="relative w-15 h-15 md:w-30 md:h-30 rounded-full object-cover"
+      />
     </div>
     <div>
       <p className="text-xs md:text-lg italic max-w-3xs md:max-w-xs text-[#333333]">
@@ -62,16 +68,16 @@ const ReviewCard = ({ review }: { review: (typeof reviews)[0] }) => (
 export default function StudentReviews() {
   return (
     <section className="relative py-8 md:py-20  overflow-hidden ">
-      <div className="absolute -top-5 left-0  hidden md:block">
+      <div className="absolute -top-5 left-0  ">
         <Image
           src="/images/Group1707480895.png"
           alt="books"
           width={28}
           height={28}
-          className="w-40 h-50 object-contain "
+          className="md:w-40 w-20 h-30 md:h-50 object-contain "
         />
       </div>
-      <div className="absolute top-16  right-10  hidden md:block">
+      <div className="absolute md:top-16 top-0 right-0  md:right-10  ">
         <Image
           src="/images/colon1.png"
           alt="graduation cap"
@@ -81,7 +87,7 @@ export default function StudentReviews() {
         />
       </div>
 
-      <div className="text-center max-w-2xl mx-auto mb-6 md:mb-13">
+      <div className="relative text-center max-w-2xl mx-auto mb-6 md:mb-13">
         <h1 className="text-2xl md:text-5xl font-bold mb-5">
           Wh
           <span className="relative inline-block">

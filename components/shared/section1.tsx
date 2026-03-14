@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Section1() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-6 md:py-20">
+    <section className="relative max-w-7xl mx-auto px-6 py-6 md:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-14 items-center">
         {/* LEFT CONTENT */}
         <div>
@@ -59,12 +59,12 @@ export default function Section1() {
 
         {/* RIGHT CONTENT */}
         <div>
-          <p className="mb-4 md:mb-8 text-base md:text-2xl md:text-right">
+          <p className="mb-4 md:mb-8 text-base md:text-[21px] md:text-right">
             Experience Where Heritage Meets Innovation
           </p>
 
           {/* Image 1 */}
-          <div className="overflow-hidden mb-4 rounded-xl flex justify-end">
+          <div className="flex justify-end mb-4 rounded-xl ">
             <Image
               src="/images/img1.png"
               alt="Students studying"
@@ -121,13 +121,20 @@ export default function Section1() {
               <Image
                 src="/images/img2.png"
                 alt="Library student"
-                width={400}
-                height={300}
+                width={500}
+                height={200}
                 className="h-full w-full object-cover"
               />
             </div>
           </div>
         </div>
+        <Image
+          src="/images/diary.png"
+          width={100}
+          height={70}
+          alt="icon"
+          className="w-12 h-12 md:w-20 md:h-20 absolute bottom-122 left-70 md:bottom-30 md:left-100 object-cover "
+        />
       </div>
     </section>
   );

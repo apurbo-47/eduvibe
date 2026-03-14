@@ -12,7 +12,7 @@ export default function VideoCard() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-5 pt-12 md:pb-12">
+    <div className="max-w-7xl mx-auto px-5 pt-10 md:pt-20 md:pb-20">
       <div className="relative overflow-hidden rounded-2xl bg-neutral-900 shadow-xl">
         {/* Video */}
         <video
