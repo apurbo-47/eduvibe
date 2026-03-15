@@ -4,12 +4,12 @@ export default function FloatingShapes() {
   return (
     <>
       {/* Left green badge */}
-      <div className="absolute left-100 md:left-3 lg:left-24 md:top-90 z-10">
+      <div className="absolute left-100 md:left-3 lg:left-24 md:top-90 z-10 hidden md:block">
         <Image src="/images/excelence.png" alt="btn" width={150} height={71} />
       </div>
 
       {/* Right purple badge */}
-      <div className="absolute right-100 md:right-5 lg:right-24 md:top-45 z-10 ">
+      <div className="absolute right-100 md:right-5 lg:right-24 md:top-45 z-10 hidden md:block ">
         <Image src="/images/innovation.png" alt="btn" width={150} height={71} />
       </div>
 

@@ -13,7 +13,7 @@ import VideoCard from "@/components/shared/videoSection";
 
 export default function Home() {
   return (
-    <div className="mb-25">
+    <div className="">
       <Hero />
       <Section1 />
       <ProgramsSection />
