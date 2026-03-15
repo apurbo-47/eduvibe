@@ -3,7 +3,7 @@ import React from "react";
 
 const Address = () => {
   return (
-    <div className="p-5 md:p-20 bg-[#F5F7FA]">
+    <div className="w-full max-w-330 mx-auto p-5 md:p-16 rounded-xl bg-[#F5F7FA]">
       <div className="max-w-md mx-auto text-center font-bold mb-6 md:mb-13">
         <h1 className=" text-2xl md:text-4xl">Our Campus Address & Contact </h1>
       </div>

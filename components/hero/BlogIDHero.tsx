@@ -3,10 +3,10 @@ import React from "react";
 
 const BlogIDHero = () => {
   return (
-    <div className="md:pt-40 pt-28 md:pb-20 pb-5 px-5 md:px-20 bg-grid bg-[#EFEBFF]">
+    <div className="relative w-full max-w-350 mx-auto md:pt-40 pt-28 md:pb-20 pb-5 px-5 md:px-20 bg-grid bg-[#EFEBFF]">
       <Image
         src="/images/cap.png"
-        width={70}
+        width={100}
         height={70}
         alt="icon"
         className="w-16 h-16 md:w-32 md:h-32 absolute opacity-50 top-28 right-5 md:top-32 md:right-10 object-cover rotate-23 "

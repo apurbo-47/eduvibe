@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CampusSection() {
   return (
-    <section className="relative w-full  bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
+    <section className="relative w-full max-w-350 mx-auto bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
       {/* Decorative book icons */}
       <Image
         src="/images/diary.png"

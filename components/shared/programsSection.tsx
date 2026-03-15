@@ -46,7 +46,7 @@ export default function ProgramsSection() {
   };
 
   return (
-    <section className="py-8 md:py-20 bg-[#F5F7FA]">
+    <section className="max-w-7xl mx-auto rounded-xl py-8 md:py-16 bg-[#F5F7FA]">
       <div className="max-w-7xl mx-auto px-4 text-center">
         {/* Badge */}
         <span className="border px-3 py-2 md:px-5 md:py-3 rounded-full text-sm">

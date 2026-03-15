@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function ProgramHero() {
   return (
-    <section className="w-full min-h-150 grid lg:grid-cols-2 overflow-hidden bg-grid-pattern">
+    <section className="w-full max-w-350 mx-auto min-h-150 grid lg:grid-cols-2 overflow-hidden bg-grid-pattern">
       {/* LEFT SIDE */}
       <div className="pt-26 md:pt-32">
         <div

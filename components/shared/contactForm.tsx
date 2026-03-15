@@ -46,7 +46,7 @@ export default function ContactForm() {
 
   return (
     <section className="bg-white pt-8 pb-8 md:pb-20 px-4">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl border border-t-4 border-t-[#7A60FF] border-white shadow-lg p-5 md:p-8 -mt-30 md:-mt-70">
+      <div className="max-w-4xl mx-auto bg-white relative rounded-2xl border border-t-4 border-t-[#7A60FF] border-white shadow-lg p-5 md:p-8 -mt-30 md:-mt-70">
         {/* Title */}
         <h2 className="text-2xl md:text-4xl text-[#333333] font-semibold mb-2 md:mb-4">
           Send us a message

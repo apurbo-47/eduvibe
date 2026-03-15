@@ -3,13 +3,13 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <div className="bg-grid-pattern bg-[#EFEBFF] pt-28 pb-30 md:pt-40 md:pb-80 px-5 md:px-0">
+    <div className=" w-full max-w-350 mx-auto relative bg-grid-pattern bg-[#EFEBFF] pt-28 pb-30 md:pt-40 md:pb-80 px-5 md:px-0">
       <Image
         src="/images/diary.png"
         width={70}
         height={70}
         alt="icon"
-        className="w-13 h-13 md:w-20 md:h-20 absolute top-24 left-8 md:top-36 md:left-60 "
+        className=" w-13 h-13 md:w-20 md:h-20 absolute top-24 left-8 md:top-36 md:left-60 "
       />
 
       <Image

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="w-full bg-[#F4F6FB] pt-30 md:pt-40 pb-8 md:pb-12 px-4 md:px-10 lg:px-20 bg-grid">
+    <section className="relative rounded-xl w-full max-w-350 mx-auto bg-[#F4F6FB] pt-30 md:pt-40 pb-8 md:pb-12 px-4 md:px-10 lg:px-20 bg-grid">
       <div className="max-w-7xl mx-auto">
         {/* Text (mobile top) */}
         <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0 mb-10 lg:mb-0 lg:hidden">
@@ -32,13 +32,13 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="absolute top-20 right-5 md:top-50 md:right-10 rotate-23  hidden md:block">
+        <div className="absolute top-32 right-5 md:top-50 md:right-10 rotate-23  ">
           <Image
             src="/images/cap.png"
             alt="graduation cap"
             width={100}
             height={24}
-            className="w-28 h-28 object-contain opacity-70"
+            className="w-16 h-16 md:w-28 md:h-28 object-contain opacity-70 "
           />
         </div>
 

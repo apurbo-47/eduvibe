@@ -13,7 +13,7 @@ export default function LatestNews() {
   );
 
   return (
-    <section className="w-full bg-white py-6 md:py-16 px-5 md:px-20">
+    <section className="w-full max-w-7xl mx-auto bg-white py-6 md:py-16 px-5 ">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-5 md:mb-10 gap-4">
         <h2 className="text-2xl md:text-4xl font-semibold">

@@ -64,7 +64,7 @@ export default function UpcomingEvents() {
   const activeEvent = events[2]; // center card
 
   return (
-    <section className="relative py-6 md:py-20 overflow-hidden m-2 md:m-0 ">
+    <section className="max-w-330 mx-auto relative py-6 md:py-20 overflow-hidden  ">
       {/* Background Decorative Elements */}
       <div className="absolute top-7 -left-2 lg:top-40 lg:left-0 ">
         <Image

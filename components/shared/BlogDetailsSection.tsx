@@ -39,7 +39,7 @@ const tocItems: TOCItem[] = [
 
 const BlogDetailsSection = () => {
   return (
-    <div className="container  mx-auto px-4 py-6 md:py-20 grid lg:grid-cols-4 gap-8">
+    <div className="w-full max-w-7xl  mx-auto px-4 py-6 md:py-16 grid lg:grid-cols-4 gap-8">
       {/* Main Content */}
       <div className="lg:col-span-3 space-y-3 md:space-y-6">
         {/* Banner Image */}

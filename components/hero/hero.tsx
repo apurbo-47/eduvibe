@@ -5,7 +5,7 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden  bg-bgSoft bg-grid bg-grid-pattern">
+    <section className="relative max-w-350 mx-auto overflow-hidden  bg-[#EFEBFF] bg-grid bg-grid-pattern">
       {/* Floating UI */}
       <FloatingShapes />
 
@@ -42,7 +42,7 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <div className="mt-10 -mb-48 md:-mb-52 flex justify-center">
+        <div className="relative mt-10 -mb-48 md:-mb-52 flex justify-center">
           <button className="flex h-24 w-24 md:h-36 md:w-36 flex-col items-center justify-center  border-4 rounded-full bg-[#6C63FF] text-xs md:text-lg font-semibold text-white shadow-xl transition hover:scale-105 hover:bg-[#7A60FF]">
             <span className="mb-2 md:mb-4">
               <ArrowDown size={28} />
@@ -53,13 +53,13 @@ export default function Hero() {
       </div>
 
       {/* Image */}
-      <div className="relative h-70 md:h-screen w-full mx-auto">
+      <div className=" relative h-70 md:h-screen w-full ">
         <Image
           src={assets.university}
           alt="University"
           fill
           priority
-          className="object-cover"
+          className=" md:rounded-xl object-cover"
         />
       </div>
     </section>

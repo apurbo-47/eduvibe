@@ -4,8 +4,8 @@ import React from "react";
 
 const UniversityPartners = () => {
   return (
-    <div>
-      <div className="grid md:grid-cols-2 gap-8 p-5 md:p-20">
+    <div className="w-full max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 p-5 md:py-16">
         <div>
           <h1 className="text-2xl md:text-[44px] text-center md:text-start md:mt-5 ">
             Learn and Grow with Our Trusted University Partners

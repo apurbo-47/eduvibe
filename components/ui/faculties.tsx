@@ -41,7 +41,7 @@ const faculties = [
 
 export default function Faculties() {
   return (
-    <section className="bg-[#F5F7FA] py-6 md:py-20 px-2.5">
+    <section className="max-w-330 mx-auto rounded-xl bg-[#F5F7FA] py-6 md:py-20 px-2.5">
       <div className="max-w-7xl mx-auto">
         {/* title */}
         <div className="text-center mb-6 md:mb-16">

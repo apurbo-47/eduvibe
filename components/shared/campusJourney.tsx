@@ -4,7 +4,7 @@ import React from "react";
 
 const CampusJourney = () => {
   return (
-    <div className="relative px-5 py-8 md:p-20 overflow-hidden">
+    <div className="relative max-w-7xl mx-auto px-5 py-8 md:p-20 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-36 md:top-60 right-0">
         <Image

@@ -135,6 +135,14 @@ export default function Section1() {
           alt="icon"
           className="w-12 h-12 md:w-20 md:h-20 absolute bottom-122 left-70 md:bottom-30 md:left-100 object-cover "
         />
+
+        <Image
+          src="/images/Group.png"
+          width={100}
+          height={70}
+          alt="icon"
+          className="w-30 h-20 md:w-60 md:h-40 absolute bottom-0 right-0  object-cover "
+        />
       </div>
     </section>
   );

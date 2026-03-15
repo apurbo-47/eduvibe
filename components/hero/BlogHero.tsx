@@ -6,7 +6,7 @@ import Image from "next/image";
 const BlogHero = () => {
   const firstThree = newsData.slice(0, 3);
   return (
-    <div className="md:pt-40 pt-28 md:pb-20 pb-5 px-5 md:px-20 bg-grid bg-white">
+    <div className="relative max-w-350 mx-auto md:pt-40 pt-28 md:pb-20 pb-5 px-5 md:px-20 bg-grid bg-[#EFEBFF]">
       <Image
         src="/images/diary.png"
         width={70}

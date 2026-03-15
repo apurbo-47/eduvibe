@@ -67,7 +67,7 @@ const ReviewCard = ({ review }: { review: (typeof reviews)[0] }) => (
 
 export default function StudentReviews() {
   return (
-    <section className="relative py-8 md:py-20  overflow-hidden ">
+    <section className="relative max-w-350 mx-auto rounded-xl py-8 md:py-20  overflow-hidden ">
       <div className="absolute -top-5 left-0  ">
         <Image
           src="/images/Group1707480895.png"

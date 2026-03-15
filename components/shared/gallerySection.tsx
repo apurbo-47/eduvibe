@@ -36,7 +36,7 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="relative bg-[#7A60FF] py-8 md:py-20 px-5 md:px-0 overflow-hidden">
+    <section className="relative max-w-350 mx-auto rounded-xl bg-[#7A60FF] py-8 md:py-20 px-5 md:px-0 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute -top-3 md:top-10 -left-2 md:left-10 ">
         <Image
@@ -85,7 +85,7 @@ const GallerySection = () => {
       </div>
 
       {/* Polaroids Container */}
-      <div className="flex justify-center items-center gap-4 md:gap-0 w-full mx-auto">
+      <div className="flex justify-center items-center gap-4 md:gap-0 w-full max-w-330 mx-auto">
         {categories.map((item, index) => (
           <div
             key={index}

@@ -4,7 +4,7 @@ import React from "react";
 
 const MissionPage = () => {
   return (
-    <div className="bg-[#F5F7FA] p-5 md:p-20">
+    <div className="bg-[#F5F7FA] max-w-7xl mx-auto p-5 md:p-16 rounded-2xl">
       <div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 md:gap-5">
           <div className=" col-span-2 bg-white rounded-lg md:rounded-[20px] p-3 md:p-5">

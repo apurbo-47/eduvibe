@@ -3,7 +3,7 @@ import React from "react";
 
 const FacilitiesCard = () => {
   return (
-    <div className="w-full  px-5 py-10 md:p-20 bg-[#F5F7FA] ">
+    <div className="w-full max-w-7xl mx-auto rounded-xl px-5 py-10 md:p-20 bg-[#F5F7FA] ">
       <div className="max-w-7xl mx-auto grid grid-cols-2  lg:grid-cols-4 gap-2.5 md:gap-5  ">
         <div className="order-3 lg:order-1 border border-white rounded-3xl bg-white p-2.5 md:p-5">
           <h3 className="text-sm md:text-xl font-bold mb-2.5 md:mb-5">
