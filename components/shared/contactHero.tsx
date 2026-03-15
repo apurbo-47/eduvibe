@@ -22,10 +22,10 @@ const ContactHero = () => {
 
       <div className="text-center">
         <h3 className=" text-lg md:text-2xl font-bold">Contact Us</h3>
-        <h1 className="max-w-sm mx-auto text-2xl md:text-4xl font-bold mt-2.5 md:mt-8 ">
+        <h1 className="max-w-xl mx-auto  text-2xl md:text-5xl font-bold mt-2.5 md:mt-8 ">
           Get in Touch with Our University
         </h1>
-        <p className="mt-2.5 md:mt-8 max-w-2xl mx-auto">
+        <p className="mt-2.5 md:mt-8 max-w-2xl mx-auto text-xs md:text-base">
           We’re here to help with your questions, admissions inquiries, and
           general information. Get in touch with our team and we’ll guide you
           with the support you need every step of the way.

@@ -35,6 +35,7 @@ export default function ContactForm() {
     }
 
     toast.success("Message sent successfully 🚀");
+
     setForm({
       firstName: "",
       lastName: "",
@@ -51,7 +52,7 @@ export default function ContactForm() {
         <h2 className="text-2xl md:text-4xl text-[#333333] font-semibold mb-2 md:mb-4">
           Send us a message
         </h2>
-        <p className="text-[#4C4C4C] text-sm md:text-lg mb-8 max-w-xl">
+        <p className="text-[#4C4C4C] text-sm md:text-lg mb-4 md:mb-8 max-w-xl">
           Have a question, request, or emergency need? Our team is here to help.
           Reach out anytime and well respond promptly.
         </p>
@@ -60,7 +61,9 @@ export default function ContactForm() {
           {/* Name */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm text-[#333333]">First Name</label>
+              <label className="text-sm md:text-base text-[#333333]">
+                First Name
+              </label>
               <input
                 type="text"
                 name="firstName"
@@ -73,7 +76,9 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label className="text-sm text-[#333333]">Last Name</label>
+              <label className="text-sm md:text-base text-[#333333]">
+                Last Name
+              </label>
               <input
                 type="text"
                 name="lastName"
@@ -89,7 +94,9 @@ export default function ContactForm() {
           {/* Email + Phone */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm text-[#333333]">Email Address</label>
+              <label className="text-sm md:text-base text-[#333333]">
+                Email Address
+              </label>
               <input
                 type="email"
                 name="email"
@@ -102,7 +109,9 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label className="text-sm text-[#333333]">Phone</label>
+              <label className="text-sm md:text-base text-[#333333]">
+                Phone
+              </label>
               <input
                 type="text"
                 inputMode="numeric"
@@ -118,7 +127,9 @@ export default function ContactForm() {
 
           {/* Message */}
           <div>
-            <label className="text-sm text-[#333333]">Message</label>
+            <label className="text-sm md:text-base text-[#333333]">
+              Message
+            </label>
             <textarea
               name="message"
               placeholder="Type Message"
