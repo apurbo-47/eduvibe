@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="relative rounded-xl w-full max-w-350 mx-auto bg-[#F4F6FB] pt-30 md:pt-40 pb-8 md:pb-12 px-4 md:px-10 lg:px-20 bg-grid">
+    <section className="relative rounded-xl w-full  bg-[#F4F6FB] pt-30 md:pt-40 pb-8 md:pb-12 px-4 md:px-10 lg:px-20 bg-grid">
       <div className="max-w-7xl mx-auto">
         {/* Text (mobile top) */}
         <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0 mb-10 lg:mb-0 lg:hidden">

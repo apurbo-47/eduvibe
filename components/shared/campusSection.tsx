@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CampusSection() {
   return (
-    <section className="relative w-full max-w-350 mx-auto bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
+    <section className="relative w-full  bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
       {/* Decorative book icons */}
       <Image
         src="/images/diary.png"
@@ -31,7 +31,7 @@ export default function CampusSection() {
       {/* grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(#d6d6f0_1px,transparent_1px),linear-gradient(90deg,#d6d6f0_1px,transparent_1px)] bg-size-[40px_40px] opacity-40"></div>
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 md:gap-8 items-center">
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:gap-8 items-center">
         {/* LEFT CONTENT */}
         <div>
           <p className="text-lg md:text-2xl font-bold mb-2.5 md:mb-8 text-center md:text-start">

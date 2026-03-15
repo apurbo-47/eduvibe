@@ -5,7 +5,7 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative max-w-350 mx-auto overflow-hidden  bg-[#EFEBFF] bg-grid bg-grid-pattern">
+    <section className="relative w-full  overflow-hidden  bg-[#EFEBFF] bg-grid bg-grid-pattern">
       {/* Floating UI */}
       <FloatingShapes />
 

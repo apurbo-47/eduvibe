@@ -6,7 +6,7 @@ import Image from "next/image";
 const BlogHero = () => {
   const firstThree = newsData.slice(0, 3);
   return (
-    <div className="relative max-w-350 mx-auto md:pt-40 pt-28 md:pb-20 pb-5 px-5 md:px-20 bg-grid bg-[#EFEBFF]">
+    <div className="relative w-full md:pt-40 pt-28 md:pb-20 pb-5 px-5 md:px-20 bg-grid bg-[#EFEBFF]">
       <Image
         src="/images/diary.png"
         width={70}
@@ -22,18 +22,20 @@ const BlogHero = () => {
         alt="icon"
         className="w-16 h-16 md:w-32 md:h-32 absolute opacity-50 top-28 right-5 md:top-32 md:right-10 object-cover rotate-23 "
       />
-      <div>
-        <h3 className="text-lg md:text-2xl text-center md:text-start font-bold mb-2.5 md:mb-8">
-          Blog
-        </h3>
-        <h1 className="md:max-w-xl font-bold text-center md:text-start text-2xl md:text-4xl mb-5 md:mb-15 leading-tight">
-          Stories and Updates from Our Academic Blog & News
-        </h1>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
-        {firstThree.map((item) => (
-          <BlogCard key={item.id} data={item} />
-        ))}
+      <div className="max-w-7xl mx-auto">
+        <div>
+          <h3 className="text-lg md:text-2xl text-center md:text-start font-bold mb-2.5 md:mb-8">
+            Blog
+          </h3>
+          <h1 className="md:max-w-xl font-bold text-center md:text-start text-2xl md:text-4xl mb-5 md:mb-15 leading-tight">
+            Stories and Updates from Our Academic Blog & News
+          </h1>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
+          {firstThree.map((item) => (
+            <BlogCard key={item.id} data={item} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -5,11 +5,11 @@ import logo from "../../../public/images/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="relative max-w-350 mx-auto rounded-xl bg-linear-to-br from-black via-[#0f0f1a] to-[#1b1b3a] text-white">
+    <footer className="relative w-full rounded-xl bg-linear-to-br from-black via-[#0f0f1a] to-[#1b1b3a] text-white">
       {/* Grid overlay (subtle) */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[40px_40px]" />
 
-      <div className="relative max-w-330 mx-auto px-6 pt-6 md:pt-20 pb-5">
+      <div className="relative max-w-350 mx-auto px-6 pt-6 md:pt-20 pb-5">
         {/* Big title */}
         <h2 className="text-xl md:text-4xl lg:text-7xl font-extrabold tracking-tight text-center mb-8 md:mb-16">
           EDU<span className="text-[#7A60FF]">VIBE</span> UNIVERSITY USA
