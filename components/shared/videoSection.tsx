@@ -1,6 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import { animations } from "../animations/animation";
+import { BsPlayCircleFill } from "react-icons/bs";
 
 export default function VideoCard() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -12,8 +15,17 @@ export default function VideoCard() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-5 pt-10 md:pt-20 md:pb-20">
-      <div className="relative overflow-hidden rounded-2xl bg-neutral-900 shadow-xl">
+    <motion.div
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.4 }}
+      className="max-w-330 mx-auto px-5 md:px-0 pt-10 md:pt-20 md:pb-20"
+    >
+      <motion.div
+        variants={animations.fadeUp}
+        className="relative overflow-hidden rounded-2xl bg-neutral-900 shadow-xl"
+      >
         {/* Video */}
         <video
           ref={videoRef}
@@ -29,12 +41,12 @@ export default function VideoCard() {
             onClick={handlePlay}
             className="absolute inset-0 flex items-center justify-center bg-black/50 cursor-pointer transition hover:bg-black/60"
           >
-            <div className="flex h-14 w-14 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#7A60FF] md:text-4xl text-white backdrop-blur hover:scale-105 transition">
-              ▶
+            <div className=" md:text-4xl text-white backdrop-blur hover:scale-105 transition">
+              <BsPlayCircleFill size={60} />
             </div>
           </div>
         )}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

@@ -1,5 +1,7 @@
+import * as motion from "framer-motion/client";
 import Image from "next/image";
 import React from "react";
+import { animations } from "../animations/animation";
 
 const GallerySection = () => {
   const categories = [
@@ -36,7 +38,13 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="relative max-w-350 mx-auto rounded-xl bg-[#7A60FF] py-8 md:py-20 px-5 md:px-0 overflow-hidden">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="relative max-w-330 mx-auto rounded-xl bg-[#7A60FF] py-8 md:py-20 px-5 md:px-0 overflow-hidden"
+    >
       {/* Background Decorative Elements */}
       <div className="absolute -top-3 md:top-10 -left-2 md:left-10 ">
         <Image
@@ -59,7 +67,10 @@ const GallerySection = () => {
 
       {/* Header Text */}
       <div className="max-w-4xl mx-auto text-center text-white mb-8 md:mb-16">
-        <h2 className="text-2xl md:text-5xl font-bold mb-4 tracking-tight">
+        <motion.h2
+          variants={animations.fadeUp}
+          className="text-2xl md:text-5xl font-bold mb-4 tracking-tight"
+        >
           Discover{" "}
           <span className="relative inline-block">
             Our Campus Gallery
@@ -76,16 +87,22 @@ const GallerySection = () => {
               />
             </svg>
           </span>
-        </h2>
-        <p className="text-sm md:text-lg opacity-90 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p
+          variants={animations.fadeUp}
+          className="text-sm md:text-lg opacity-90 max-w-2xl mx-auto"
+        >
           Explore moments from campus life, academic spaces, and student
           experiences that reflect the spirit, culture, and vibrancy of our
           university.
-        </p>
+        </motion.p>
       </div>
 
       {/* Polaroids Container */}
-      <div className="flex justify-center items-center gap-4 md:gap-0 w-full max-w-330 mx-auto">
+      <motion.div
+        variants={animations.fadeUp}
+        className="flex justify-center items-center gap-4 md:gap-0 w-full max-w-330 mx-auto"
+      >
         {categories.map((item, index) => (
           <div
             key={index}
@@ -105,8 +122,8 @@ const GallerySection = () => {
             </p>
           </div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

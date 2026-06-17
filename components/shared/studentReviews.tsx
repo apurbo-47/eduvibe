@@ -74,7 +74,7 @@ export default function StudentReviews() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="relative max-w-350 mx-auto rounded-xl py-8 md:py-20  overflow-hidden "
+      className="relative max-w-330 mx-auto rounded-xl py-8 md:py-20  overflow-hidden "
     >
       <div className="absolute -top-5 left-0  ">
         <Image

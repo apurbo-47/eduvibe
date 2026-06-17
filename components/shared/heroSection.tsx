@@ -1,8 +1,16 @@
+import * as motion from "framer-motion/client";
 import Image from "next/image";
+import { animations } from "../animations/animation";
 
 const HeroSection = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-5 md:px-0 py-8 md:py-10 ">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.4 }}
+      className="w-full max-w-330 mx-auto px-5 md:px-0 py-8 md:py-10 "
+    >
       <div className="relative overflow-hidden rounded-3xl bg-linear-to-r from-[#8770FA] to-[#5F51A8]">
         {/* grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-size-[40px_40px]" />
@@ -40,7 +48,10 @@ const HeroSection = () => {
 
         <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-24 items-center p-6 md:p-0">
           {/* left image */}
-          <div className="flex justify-center md:justify-start">
+          <motion.div
+            variants={animations.fadeRight}
+            className="flex justify-center md:justify-start"
+          >
             <Image
               src="/images/student.png"
               alt="Students"
@@ -48,10 +59,13 @@ const HeroSection = () => {
               height={420}
               className=" w-full h-full"
             />
-          </div>
+          </motion.div>
 
           {/* right content */}
-          <div className="text-white space-y-5">
+          <motion.div
+            variants={animations.fadeLeft}
+            className="text-white space-y-5"
+          >
             <div className="flex items-center gap-2 font-semibold text-2xl md:text-4xl">
               <Image
                 src="/images/logowhite.png"
@@ -74,10 +88,10 @@ const HeroSection = () => {
                 →
               </span>
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

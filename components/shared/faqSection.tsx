@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Plus, Minus, HelpCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { animations } from "../animations/animation";
 
 const faqData = [
   {
@@ -80,9 +81,15 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-5 md:px-10 py-10 md:py-0 flex flex-col lg:flex-row gap-5 md:gap-10 items-center">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.4 }}
+      className="w-full max-w-330 mx-auto px-5 md:px-10 py-10 md:py-0 flex flex-col lg:flex-row gap-5 md:gap-10 items-center overflow-hidden"
+    >
       {/* Left Content: FAQ Accordion */}
-      <div className="w-full lg:w-1/2">
+      <motion.div variants={animations.fadeRight} className="w-full lg:w-1/2">
         <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-3 md:mb-10 leading-[1.1]">
           Have Questions? We’re
           <br />
@@ -100,10 +107,13 @@ export default function FAQSection() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* Right Content: Image */}
-      <div className="w-full lg:w-1/2 relative">
+      <motion.div
+        variants={animations.fadeLeft}
+        className="w-full lg:w-1/2 relative"
+      >
         <div className=" overflow-hidden ">
           <Image
             src="/images/faqImage.png"
@@ -115,7 +125,7 @@ export default function FAQSection() {
         </div>
         {/* Subtle purple glow effect similar to the image */}
         <div className="absolute -top-10 -right-10 w-64 h-64 bg-purple-200/30 blur-3xl rounded-full -z-10" />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

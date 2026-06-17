@@ -2,23 +2,43 @@ import Link from "next/link";
 import { Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 import logo from "../../../public/images/logo.png";
+import * as motion from "framer-motion/client";
+import { animations } from "@/components/animations/animation";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full rounded-xl bg-linear-to-br from-black via-[#0f0f1a] to-[#1b1b3a] text-white">
+    <footer className="relative w-full rounded-xl bg-linear-to-br from-black via-[#0f0f1a] to-[#1b1b3a] text-white overflow-hidden">
       {/* Grid overlay (subtle) */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[40px_40px]" />
 
-      <div className="relative max-w-350 mx-auto px-6 pt-6 md:pt-20 pb-5">
+      <motion.div
+        variants={animations.stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="relative max-w-330 mx-auto px-6 pt-6 md:pt-20 pb-5"
+      >
         {/* Big title */}
-        <h2 className="text-xl md:text-4xl lg:text-7xl font-extrabold tracking-tight text-center mb-8 md:mb-16">
+        <motion.h2
+          variants={animations.fadeUp}
+          className="text-xl md:text-4xl lg:text-7xl font-extrabold tracking-tight text-center mb-8 md:mb-16"
+        >
           EDU<span className="text-[#7A60FF]">VIBE</span> UNIVERSITY USA
-        </h2>
+        </motion.h2>
 
         {/* Content */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-10">
+        <motion.div
+          variants={animations.stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-10"
+        >
           {/* Brand */}
-          <div className="col-span-2 space-y-4">
+          <motion.div
+            variants={animations.fadeUp}
+            className="col-span-2 space-y-4"
+          >
             <div className="flex items-center gap-2 text-xl md:text-4xl font-semibold">
               <Image src={logo} alt="logo" />
               Eduvibe
@@ -34,10 +54,10 @@ export default function Footer() {
               <Mail size={16} />
               <span>Eduvibeuniversity@gmail.com</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Menu */}
-          <div>
+          <motion.div variants={animations.fadeUp}>
             <h4 className="font-semibold mb-4">Menu</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
@@ -53,10 +73,10 @@ export default function Footer() {
                 <Link href="#">Campus</Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Resource */}
-          <div>
+          <motion.div variants={animations.fadeUp}>
             <h4 className="font-semibold mb-4">Resource</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
@@ -72,10 +92,10 @@ export default function Footer() {
                 <Link href="#">Campus Information</Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Legal */}
-          <div>
+          <motion.div variants={animations.fadeUp}>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
@@ -91,10 +111,10 @@ export default function Footer() {
                 <Link href="#">Compliance</Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Support */}
-          <div>
+          <motion.div variants={animations.fadeUp}>
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
@@ -110,17 +130,26 @@ export default function Footer() {
                 <Link href="#">Gallery</Link>
               </li>
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Divider */}
-        <div className="border-t border-white/14 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-400">
+        <motion.div
+          variants={animations.stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="border-t border-white/14 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <motion.p
+            variants={animations.fadeUp}
+            className="text-xs text-gray-400"
+          >
             © 2025 Eduvibe. All Rights Reserved
-          </p>
+          </motion.p>
 
           {/* Social icons */}
-          <div className="flex gap-4">
+          <motion.div variants={animations.fadeUp} className="flex gap-4">
             <Link
               href="#"
               className="p-2 rounded-full border border-white/20 hover:bg-white/10"
@@ -145,14 +174,17 @@ export default function Footer() {
             >
               <Linkedin size={16} />
             </Link>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-4 text-xs text-gray-400">
+          <motion.div
+            variants={animations.fadeUp}
+            className="flex gap-4 text-xs text-gray-400"
+          >
             <Link href="#">Privacy Policy</Link>
             <Link href="#">Refund Policy</Link>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </footer>
   );
 }

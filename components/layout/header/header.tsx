@@ -28,22 +28,22 @@ export default function Navbar() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className=""
+      className="overflow-x-hidden"
     >
       <motion.div
         variants={animations.fadeDown}
-        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-full max-w-6xl mx-auto bg-white shadow-lg rounded-[55px]"
+        className="fixed top-5 md:left-1/2 md:-translate-x-1/2 z-50 w-[calc(100%-20px)]  bg-white shadow-lg rounded-[55px] "
       >
-        <div className="p-4">
+        <div className="p-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-1.5">
-              <Image src={logo} alt="logo" />
+              <Image src={logo} alt="logo" className="object-cover" />
               <span className="text-xl md:text-4xl font-bold">Eduvibe</span>
             </Link>
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
 
@@ -64,7 +64,7 @@ export default function Navbar() {
             </nav>
 
             {/* Right Buttons */}
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               <button className="h-9 w-9 rounded-full border flex items-center justify-center">
                 <FaUser />
               </button>
@@ -77,7 +77,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button onClick={() => setOpen(!open)} className="md:hidden p-2">
+            <button onClick={() => setOpen(!open)} className="lg:hidden p-2">
               {open ? <X /> : <Menu />}
             </button>
           </div>
@@ -85,7 +85,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden border-t bg-white">
+          <div className="lg:hidden border-t bg-white">
             <div className="flex flex-col gap-4 p-4">
               {navLinks.map((link) => (
                 <Link

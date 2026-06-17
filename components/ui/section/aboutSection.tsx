@@ -1,9 +1,17 @@
+import { animations } from "@/components/animations/animation";
+import * as motion from "framer-motion/client";
 import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="relative rounded-xl w-full  bg-[#F4F6FB] pt-30 md:pt-40 pb-8 md:pb-12 px-4 md:px-10 lg:px-20 bg-grid">
-      <div className="max-w-7xl mx-auto">
+    <motion.section
+      variants={animations.fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="relative rounded-xl w-full overflow-hidden  bg-[#F4F6FB] pt-30 md:pt-40 pb-8 md:pb-12 px-4  bg-grid"
+    >
+      <div className="max-w-330 mx-auto">
         {/* Text (mobile top) */}
         <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0 mb-10 lg:mb-0 lg:hidden">
           <p className="text-sm font-bold  mb-2.5">About Us</p>
@@ -44,7 +52,7 @@ const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-2.5 md:gap-10 items-center">
           {/* Left Image */}
-          <div className="w-full">
+          <motion.div variants={animations.fadeRight} className="w-full">
             <div className="relative w-full h-75 md:h-140 rounded-2xl overflow-hidden">
               <Image
                 src="/images/about1.png"
@@ -53,10 +61,13 @@ const AboutSection = () => {
                 className="object-cover"
               />
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Content */}
-          <div className="flex flex-col gap-6">
+          <motion.div
+            variants={animations.fadeLeft}
+            className="flex flex-col gap-6"
+          >
             {/* Text (desktop) */}
             <div className="hidden lg:block">
               <p className="text-2xl font-bold mb-2.5">About Us</p>
@@ -105,10 +116,10 @@ const AboutSection = () => {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

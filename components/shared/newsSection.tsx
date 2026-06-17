@@ -1,6 +1,8 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { animations } from "../animations/animation";
 
 const newsData = [
   {
@@ -87,9 +89,18 @@ export default function NewsSection() {
   const visibleCards = newsData.slice(index, index + cardsPerView);
 
   return (
-    <section className="max-w-7xl mx-auto py-6 md:py-16 px-5">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="max-w-330 mx-auto py-6 md:py-16 px-5"
+    >
       {/* Header */}
-      <div className="flex flex-col md:flex-row  items-center justify-between mb-10">
+      <motion.div
+        variants={animations.fadeUp}
+        className="flex flex-col md:flex-row  items-center justify-between mb-10"
+      >
         <h2 className=" text-2xl md:text-4xl font-semibold max-w-xl mb-5">
           Stay updated with news and events at Peregrin University.
         </h2>
@@ -117,13 +128,19 @@ export default function NewsSection() {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+      <motion.div
+        variants={animations.fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+      >
         {visibleCards.map((item) => (
           <div key={item.id}>
-            <div className="relative h-28 md:h-56 w-full rounded-xl overflow-hidden">
+            <div className="relative h-56 w-full object-cover rounded-xl overflow-hidden">
               <Image src={item.img} alt="" fill className="object-cover" />
             </div>
 
@@ -143,7 +160,7 @@ export default function NewsSection() {
             </div>
           </div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
