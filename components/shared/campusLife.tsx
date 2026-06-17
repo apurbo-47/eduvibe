@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { animations } from "../animations/animation";
 
 const campusData = [
   {
@@ -71,63 +73,107 @@ export default function CampusLife() {
   const active = campusData[index];
 
   return (
-    <section className="w-full bg-white py-8 md:py-16 px-5 md:px-20">
-      <div className="max-w-7xl mx-auto">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="w-full bg-white py-8 md:py-16 px-5 md:px-20"
+    >
+      <div className="max-w-330 mx-auto">
         {/* Title */}
-        <div className="text-center mb-5 md:mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold">
+        <motion.div
+          variants={animations.stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center mb-5 md:mb-12"
+        >
+          <motion.h2
+            variants={animations.fadeUp}
+            className="text-2xl md:text-4xl font-bold"
+          >
             Explore Our Campus Life
-          </h2>
-          <p className="text-sm md:text-lg mt-3 max-w-xl mx-auto">
+          </motion.h2>
+          <motion.p
+            variants={animations.fadeUp}
+            className="text-sm md:text-lg mt-3 max-w-xl mx-auto"
+          >
             Experience a vibrant campus of learning, culture, and community.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Main Card */}
-        <div className="bg-white rounded-3xl p-3 md:p-6 border-8 border-[#F5F7FA]  shadow-sm grid md:grid-cols-2 gap-6">
+        <motion.div
+          variants={animations.stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="bg-white rounded-3xl p-3 md:p-6 border-8 border-[#F5F7FA]  shadow-sm grid md:grid-cols-2 gap-6"
+        >
           {/* LEFT CONTENT */}
           <div className="flex flex-col justify-between">
             <div>
-              <span className=" text-base md:text-xl font-bold">
-                {active.id}
-              </span>
+              <motion.div variants={animations.fadeUp}>
+                <p className="text-[clamp(16px,2vw,20px)] font-bold">
+                  {active.id}
+                </p>
 
-              <div className="w-20 h-0.5 bg-black mt-2.5"></div>
-              <div className="w-28 h-0.5 bg-black mt-1 "></div>
+                <div className="w-20 h-0.5 bg-black mt-2.5"></div>
+                <div className="w-28 h-0.5 bg-black mt-1 "></div>
+              </motion.div>
 
-              <h3 className="text-2xl md:text-4xl font-bold mt-3 mb-3 md:mt-5 md:mb-5">
+              <motion.h3
+                variants={animations.fadeUp}
+                className="text-2xl md:text-4xl font-bold mt-3 mb-3 md:mt-5 md:mb-5"
+              >
                 {active.title}
-              </h3>
+              </motion.h3>
 
-              <p className="text-xs md:text-lg  leading-relaxed">
+              <motion.p
+                variants={animations.fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="text-xs md:text-lg  leading-relaxed"
+              >
                 {active.description}
-              </p>
+              </motion.p>
 
-              <button className="mt-3 md:mt-6 text-sm md:text-lg text-[#7A60FF] font-medium flex items-center gap-2 cursor-pointer">
+              <motion.button
+                variants={animations.fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="mt-3 md:mt-6 text-sm md:text-lg text-[#7A60FF] font-medium flex items-center gap-2 cursor-pointer"
+              >
                 See More Details →
-              </button>
+              </motion.button>
             </div>
           </div>
 
           {/* RIGHT IMAGES */}
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 h-70 md:h-87">
-            <div className="row-span-2 relative rounded-xl overflow-hidden">
+          <motion.div
+            variants={animations.fadeLeft}
+            className="grid grid-cols-2 grid-rows-2 gap-4 h-70 md:h-87"
+          >
+            <motion.div className="row-span-2 relative rounded-xl overflow-hidden">
               <Image
                 src={active.images[0]}
                 alt=""
                 fill
                 className="object-cover"
               />
-            </div>
+            </motion.div>
 
-            <div className="relative rounded-xl overflow-hidden">
+            <motion.div className="relative rounded-xl overflow-hidden">
               <Image
                 src={active.images[1]}
                 alt=""
                 fill
                 className="object-cover"
               />
-            </div>
+            </motion.div>
 
             <div className="relative rounded-xl overflow-hidden">
               <Image
@@ -137,11 +183,17 @@ export default function CampusLife() {
                 className="object-cover"
               />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Bottom Navigation */}
-        <div className="flex flex-col md:flex-row items-center justify-between mt-8 gap-6">
+        <motion.div
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col md:flex-row items-center justify-between mt-8 gap-6"
+        >
           {/* Tabs */}
           <div className="flex gap-2 md:gap-6 overflow-x-auto">
             {campusData.map((item, i) => (
@@ -180,8 +232,8 @@ export default function CampusLife() {
               →
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

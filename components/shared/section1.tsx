@@ -1,11 +1,19 @@
+import * as motion from "framer-motion/client";
 import Image from "next/image";
+import { animations } from "../animations/animation";
 
 export default function Section1() {
   return (
-    <section className="relative max-w-7xl mx-auto px-6 py-6 md:py-20">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      className="relative max-w-330 mx-auto px-6 py-6 md:py-20 overflow-hidden"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-14 items-center">
         {/* LEFT CONTENT */}
-        <div>
+        <motion.div variants={animations.fadeRight}>
           {/* Badge */}
           <button className="md:mb-6 mb-4 rounded-full border border-black bg-[#F6F4FFB2] px-4 py-1 text-sm md:text-lg hover:bg-black hover:text-white">
             Know About us
@@ -55,10 +63,10 @@ export default function Section1() {
           <button className="mt-4 md:mt-8 rounded-full bg-[#7A60FF] cursor-pointer px-4 py-2 md:px-6 md:py-3 text-white font-medium hover:bg-purple-700 transition">
             Read Our Story
           </button>
-        </div>
+        </motion.div>
 
         {/* RIGHT CONTENT */}
-        <div>
+        <motion.div variants={animations.fadeLeft}>
           <p className="mb-4 md:mb-8 text-base md:text-[21px] md:text-right">
             Experience Where Heritage Meets Innovation
           </p>
@@ -127,7 +135,7 @@ export default function Section1() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
         <Image
           src="/images/diary.png"
           width={100}
@@ -144,6 +152,6 @@ export default function Section1() {
           className="w-30 h-20 md:w-60 md:h-40 absolute bottom-0 right-0  object-cover "
         />
       </div>
-    </section>
+    </motion.section>
   );
 }

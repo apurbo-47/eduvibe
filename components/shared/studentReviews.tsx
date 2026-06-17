@@ -1,6 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { animations } from "../animations/animation";
 
 const reviews = [
   {
@@ -67,7 +69,13 @@ const ReviewCard = ({ review }: { review: (typeof reviews)[0] }) => (
 
 export default function StudentReviews() {
   return (
-    <section className="relative max-w-350 mx-auto rounded-xl py-8 md:py-20  overflow-hidden ">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="relative max-w-350 mx-auto rounded-xl py-8 md:py-20  overflow-hidden "
+    >
       <div className="absolute -top-5 left-0  ">
         <Image
           src="/images/Group1707480895.png"
@@ -88,7 +96,10 @@ export default function StudentReviews() {
       </div>
 
       <div className="relative text-center max-w-2xl mx-auto mb-6 md:mb-13">
-        <h1 className="text-2xl md:text-5xl font-bold mb-5">
+        <motion.h1
+          variants={animations.fadeUp}
+          className="text-2xl md:text-5xl font-bold mb-5"
+        >
           Wh
           <span className="relative inline-block">
             ats our student
@@ -103,11 +114,14 @@ export default function StudentReviews() {
             </span>
           </span>
           {""} says
-        </h1>
-        <p className="text-sm md:text-lg text-[#333333]">
+        </motion.h1>
+        <motion.p
+          variants={animations.fadeUp}
+          className="text-sm md:text-lg text-[#333333]"
+        >
           Hear directly from our students as they share their experiences,
           achievements, and journey within our vibrant academic community
-        </p>
+        </motion.p>
       </div>
 
       {/* Global keyframes */}
@@ -122,7 +136,13 @@ export default function StudentReviews() {
         }
       `}</style>
 
-      <div className="flex flex-col gap-6">
+      <motion.div
+        variants={animations.fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col gap-6"
+      >
         <div
           className="flex w-max gap-6"
           style={{ animation: "marquee 60s linear infinite" }}
@@ -149,7 +169,7 @@ export default function StudentReviews() {
             <ReviewCard key={i} review={r} />
           ))}
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

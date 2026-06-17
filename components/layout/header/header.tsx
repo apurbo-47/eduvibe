@@ -7,6 +7,8 @@ import Image from "next/image";
 import logo from "../../../public/images/logo.png";
 import { FaUser } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { animations } from "@/components/animations/animation";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -21,8 +23,17 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="">
-      <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-full max-w-6xl mx-auto bg-white shadow-lg rounded-[55px]">
+    <motion.header
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className=""
+    >
+      <motion.div
+        variants={animations.fadeDown}
+        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-full max-w-6xl mx-auto bg-white shadow-lg rounded-[55px]"
+      >
         <div className="p-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -95,7 +106,7 @@ export default function Navbar() {
             </div>
           </div>
         )}
-      </div>
-    </header>
+      </motion.div>
+    </motion.header>
   );
 }

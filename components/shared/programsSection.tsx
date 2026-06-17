@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { assets } from "@/assets";
+import { motion } from "framer-motion";
+import { animations } from "../animations/animation";
 
 const programs = [
   {
@@ -46,15 +48,26 @@ export default function ProgramsSection() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto rounded-xl py-8 md:py-16 bg-[#F5F7FA]">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="max-w-330 mx-auto rounded-xl py-8 md:py-16 bg-[#F5F7FA]"
+    >
+      <div className=" text-center">
         {/* Badge */}
-        <span className="border px-3 py-2 md:px-5 md:py-3 rounded-full text-sm">
-          Leading Our Programs
-        </span>
+        <motion.div variants={animations.fadeUp}>
+          <span className="border px-3 py-2 md:px-5 md:py-3 rounded-full text-sm">
+            Leading Our Programs
+          </span>
+        </motion.div>
 
         {/* Title */}
-        <div className="flex md:flex-row flex-col justify-center items-center md:gap-4 mt-5 mb-8 md:mb-16">
+        <motion.div
+          variants={animations.fadeUp}
+          className="flex md:flex-row flex-col justify-center items-center md:gap-4 mt-5 mb-8 md:mb-16"
+        >
           <Image
             src={assets.cap}
             alt="cap"
@@ -65,10 +78,13 @@ export default function ProgramsSection() {
           <h2 className="text-2xl md:text-4xl font-bold  ">
             Discover Our University Programs
           </h2>
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div className="flex items-center justify-center gap-8">
+        <motion.div
+          variants={animations.fadeUp}
+          className="flex items-center justify-center gap-8"
+        >
           {cards.map((card, index) => {
             const active = index === 1;
 
@@ -120,16 +136,28 @@ export default function ProgramsSection() {
               </div>
             );
           })}
-        </div>
+        </motion.div>
 
-        <div className=" md:mt-16 mt-10 text-[#333333] max-w-md mx-auto ">
+        <motion.div
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className=" md:mt-16 mt-10 text-[#333333] max-w-md mx-auto "
+        >
           <p className=" text-base md:text-2xl ">
             Thoughtfully Crafted Education Driven by Excellence and Innovation
           </p>
-        </div>
+        </motion.div>
 
         {/* Arrows */}
-        <div className="flex justify-center gap-4 mt-3 md:mt-8">
+        <motion.div
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex justify-center gap-4 mt-3 md:mt-8"
+        >
           <button
             onClick={prevSlide}
             className="w-12 h-12 rounded-full border border-[#7A60FF] text-[#7A60FF] hover:bg-[#7A60FF] hover:text-white flex items-center justify-center cursor-pointer"
@@ -143,8 +171,8 @@ export default function ProgramsSection() {
           >
             <ArrowRight size={20} />
           </button>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

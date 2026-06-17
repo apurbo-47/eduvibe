@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { animations } from "../animations/animation";
 
 const initialEvents = [
   {
@@ -64,7 +66,13 @@ export default function UpcomingEvents() {
   const activeEvent = events[2]; // center card
 
   return (
-    <section className="max-w-330 mx-auto relative py-6 md:py-20 overflow-hidden  ">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="max-w-330 mx-auto relative py-6 md:py-20 overflow-hidden  "
+    >
       {/* Background Decorative Elements */}
       <div className="absolute top-7 -left-2 lg:top-40 lg:left-0 ">
         <Image
@@ -85,10 +93,13 @@ export default function UpcomingEvents() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         {/* Heading */}
         <div className="text-center mb-10 md:mb-16 m-3 ">
-          <h2 className="text-2xl md:text-4xl font-bold">
+          <motion.h2
+            variants={animations.fadeUp}
+            className="text-2xl md:text-4xl font-bold"
+          >
             {" "}
             <span className="relative inline-block">
               Upcoming Events
@@ -102,16 +113,25 @@ export default function UpcomingEvents() {
                 />
               </span>
             </span>
-          </h2>
-          <p className="text-center text-sm md:text-lg mt-3 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p
+            variants={animations.fadeUp}
+            className="text-center text-sm md:text-lg mt-3 max-w-2xl mx-auto"
+          >
             Explore upcoming academic, cultural, and campus events at our
             university. Stay connected with seminars, workshops, and activities
             designed to enrich student life.
-          </p>
+          </motion.p>
         </div>
 
         {/* Cards */}
-        <div className="relative flex items-center justify-center">
+        <motion.div
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative flex items-center justify-center"
+        >
           <button
             onClick={prev}
             className="absolute left-0 z-10 bg-[#7A60FF] text-white cursor-pointer shadow w-10 h-10 rounded-full"
@@ -159,10 +179,16 @@ export default function UpcomingEvents() {
           >
             →
           </button>
-        </div>
+        </motion.div>
 
         {/* Timeline */}
-        <div className="flex justify-center items-center gap-5 md:gap-10 mt-8 md:mt-12">
+        <motion.div
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex justify-center items-center gap-5 md:gap-10 mt-8 md:mt-12"
+        >
           {events.map((event, i) => {
             const isActive = i === 2;
 
@@ -184,15 +210,21 @@ export default function UpcomingEvents() {
               </div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Center Date */}
-        <div className="text-center">
+        <motion.div
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center"
+        >
           <span className="px-4 py-2 bg-[#7A60FF] text-white rounded-full text-sm">
             {activeEvent.date}
           </span>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
