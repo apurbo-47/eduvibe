@@ -92,9 +92,10 @@ export default function CampusLife() {
                 {active.id}
               </span>
 
-              <div className="w-16 h-0.5 bg-black my-3"></div>
+              <div className="w-20 h-0.5 bg-black mt-2.5"></div>
+              <div className="w-28 h-0.5 bg-black mt-1 "></div>
 
-              <h3 className="text-2xl md:text-4xl font-bold mb-3">
+              <h3 className="text-2xl md:text-4xl font-bold mt-3 mb-3 md:mt-5 md:mb-5">
                 {active.title}
               </h3>
 
@@ -102,7 +103,7 @@ export default function CampusLife() {
                 {active.description}
               </p>
 
-              <button className="mt-3 md:mt-6 text-sm md:text-lg text-[#7A60FF] font-medium flex items-center gap-2">
+              <button className="mt-3 md:mt-6 text-sm md:text-lg text-[#7A60FF] font-medium flex items-center gap-2 cursor-pointer">
                 See More Details →
               </button>
             </div>

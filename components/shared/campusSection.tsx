@@ -73,7 +73,7 @@ export default function CampusSection() {
         {/* RIGHT IMAGES */}
         <div className="flex gap-2.5 md:gap-6 justify-center items-end lg:justify-end ">
           {/* big image */}
-          <div className="relative w-47 md:w-full h-47 md:h-120 rounded-2xl overflow-hidden">
+          <div className="relative w-47 md:w-90 h-47 md:h-120 rounded-2xl overflow-hidden">
             <Image
               src="/images/walking.png"
               alt="student walking"

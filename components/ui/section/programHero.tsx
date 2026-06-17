@@ -79,13 +79,19 @@ export default function ProgramHero() {
           />
 
           {/* Floating tag 1 */}
-          <div className="absolute top-4  md:top-38 left-7 md:left-15 bg-[#00A991] text-white text-sm px-4 py-1 rounded-full shadow-md">
-            Knowledge
+          <div className="absolute top-4  md:top-38 left-7 md:left-15 ">
+            <Image
+              src="/images/knowledge.png"
+              alt="btn"
+              width={140}
+              height={71}
+              className=" w-20 h-10 md:w-36 md:h-20"
+            />
           </div>
 
           {/* Floating tag 2 */}
-          <div className="absolute bottom-0 -left-24 md:bottom-32 md:-left-12 bg-[#FF993F] text-white text-sm px-4 py-1 rounded-full shadow-md">
-            Innovation
+          <div className="absolute bottom-0 -left-24 md:bottom-32 md:-left-20 z-10 hidden md:block ">
+            <Image src="/images/inno.png" alt="btn" width={140} height={71} />
           </div>
         </div>
       </div>

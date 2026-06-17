@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactHero = () => {
   return (
-    <div className=" w-full max-w-350 mx-auto relative bg-grid-pattern bg-[#EFEBFF] pt-28 pb-30 md:pt-40 md:pb-80 px-5 md:px-0">
+    <div className=" w-full  relative bg-grid-pattern bg-[#EFEBFF] pt-28 pb-30 md:pt-40 md:pb-80 px-5 md:px-0">
       <Image
         src="/images/diary.png"
         width={70}

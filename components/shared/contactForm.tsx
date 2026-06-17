@@ -19,6 +19,7 @@ export default function ContactForm() {
       ...form,
       [e.target.name]: e.target.value,
     });
+    // console.log(e.target.value);
   };
 
   const validatePhone = (phone: string) => {
@@ -28,6 +29,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(form);
 
     if (!validatePhone(form.phone)) {
       toast.error("Please enter a valid Bangladesh phone number");
@@ -148,7 +150,7 @@ export default function ContactForm() {
               className="flex items-center cursor-pointer gap-2 bg-[#7A60FF] text-white px-6 py-3 rounded-full hover:bg-purple-700 transition"
             >
               Send a message
-              <span>➜</span>
+              <span className="-rotate-45">➜</span>
             </button>
           </div>
         </form>

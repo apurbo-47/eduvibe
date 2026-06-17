@@ -10,7 +10,7 @@ const BlogCard = ({ data }: { data: News }) => {
       className="group cursor-pointer transition hover:-translate-y-1"
     >
       {/* Image */}
-      <div className="relative w-full h-50 rounded-xl overflow-hidden">
+      <div className="relative w-full h-60 rounded-xl overflow-hidden">
         <Image
           src={data.image}
           alt="news"
