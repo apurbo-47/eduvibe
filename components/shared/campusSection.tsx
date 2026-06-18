@@ -1,8 +1,16 @@
+import * as motion from "framer-motion/client";
 import Image from "next/image";
+import { animations } from "../animations/animation";
 
 export default function CampusSection() {
   return (
-    <section className="relative w-full  bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="relative w-full  bg-[#F3F4F8] pt-26 md:pt-32 pb-8 md:pb-20 px-5 lg:px-20 overflow-hidden"
+    >
       {/* Decorative book icons */}
       <Image
         src="/images/diary.png"
@@ -34,23 +42,35 @@ export default function CampusSection() {
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 md:gap-8 items-center">
         {/* LEFT CONTENT */}
         <div>
-          <p className="text-lg md:text-2xl font-bold mb-2.5 md:mb-8 text-center md:text-start">
+          <motion.p
+            variants={animations.fadeUp}
+            className="text-lg md:text-2xl font-bold mb-2.5 md:mb-8 text-center md:text-start"
+          >
             Campus
-          </p>
+          </motion.p>
 
-          <h2 className="text-[28px] lg:text-5xl font-bold leading-tight text-center md:text-start mb-2.5 md:mb-5">
+          <motion.h2
+            variants={animations.fadeUp}
+            className="text-[28px] lg:text-5xl font-bold leading-tight text-center md:text-start mb-2.5 md:mb-5"
+          >
             A Campus Built for Learning
-          </h2>
+          </motion.h2>
 
-          <p className=" max-w-lg mb-5 md:mb-8 text-center md:text-start">
+          <motion.p
+            variants={animations.fadeUp}
+            className=" max-w-lg mb-5 md:mb-8 text-center md:text-start"
+          >
             Our campus is thoughtfully designed to support academic excellence
             and student success. With modern facilities, collaborative spaces,
             and a vibrant learning environment, students are encouraged to
             explore, innovate, and grow.
-          </p>
+          </motion.p>
 
           {/* bottom small card + circle */}
-          <div className="flex items-center gap-2 md:gap-10 ">
+          <motion.div
+            variants={animations.fadeUp}
+            className="flex items-center gap-2 md:gap-10 "
+          >
             <div className="relative w-50 h-35 md:w-70 md:h-50 rounded-xl overflow-hidden">
               <Image
                 src="/images/study.png"
@@ -67,11 +87,14 @@ export default function CampusSection() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* RIGHT IMAGES */}
-        <div className="flex gap-2.5 md:gap-6 justify-center items-end lg:justify-end ">
+        <motion.div
+          variants={animations.fadeLeft}
+          className="flex gap-2.5 md:gap-6 justify-center items-end lg:justify-end "
+        >
           {/* big image */}
           <div className="relative w-47 md:w-90 h-47 md:h-120 rounded-2xl overflow-hidden">
             <Image
@@ -91,8 +114,8 @@ export default function CampusSection() {
               className="object-cover"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

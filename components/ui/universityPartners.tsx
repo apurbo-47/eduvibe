@@ -1,12 +1,20 @@
 import { assets } from "@/assets";
+import * as motion from "framer-motion/client";
 import Image from "next/image";
 import React from "react";
+import { animations } from "../animations/animation";
 
 const UniversityPartners = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto">
+    <motion.div
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.4 }}
+      className="w-full max-w-330 mx-auto overflow-hidden"
+    >
       <div className="grid md:grid-cols-2 gap-8 md:gap-16 p-5 md:py-16">
-        <div>
+        <motion.div variants={animations.fadeRight}>
           <h1 className="text-2xl md:text-[44px] text-center md:text-start md:mt-5 ">
             Learn and Grow with Our Trusted University Partners
           </h1>
@@ -30,9 +38,9 @@ const UniversityPartners = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={animations.fadeLeft}>
           <div className="flex justify-between items-center gap-2.5 md:gap-3.5">
             <div className="bg-[#F5F7FA] p-4 md:p-8 rounded-xl md:rounded-2xl">
               <Image
@@ -122,9 +130,9 @@ const UniversityPartners = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

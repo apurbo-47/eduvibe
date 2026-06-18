@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { animations } from "../animations/animation";
 
 type Video = {
   id: number;
@@ -15,18 +17,36 @@ const videos: Video[] = [
 
 const VirtualTour = () => {
   return (
-    <div>
-      <div className="lg:p-20 p-5">
-        <div className="max-w-7xl mx-auto flex justify-between items-center gap-3 md:gap-8">
+    <motion.div
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <div className="max-w-330 mx-auto lg:py-20 p-5">
+        <motion.div
+          variants={animations.fadeUp}
+          className=" flex justify-between items-center gap-3 md:gap-8"
+        >
           <h1 className="text-xl lg:text-4xl font-bold">Virtual Tour</h1>
-          <div className="w-48 md:w-full max-w-4xl mx-auto h-0.5 bg-linear-to-r from-white to-[#7A60FF]"></div>
-        </div>
+          <div className="w-48 md:w-130 lg:w-full max-w-5xl mx-auto h-0.5 bg-linear-to-r from-white to-[#7A60FF]" />
+        </motion.div>
 
-        <div className=" max-w-7xl mx-auto pt-5 md:pt-13 ">
+        <motion.div
+          variants={animations.stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          className="  pt-5 md:pt-13 "
+        >
           <div className="flex flex-col md:flex-row items-center justify-between gap-2.5 md:gap-5">
             {videos.map((video, index) => (
-              <div
+              <motion.div
                 key={video.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.2 }}
+                viewport={{ once: true }}
                 className={`relative overflow-hidden rounded-xl md:rounded-[20px] group cursor-pointer w-full h-65 lg:h-125
               lg:w-65 ${index === 1 ? "lg:w-170" : ""}`}
               >
@@ -53,12 +73,12 @@ const VirtualTour = () => {
                     </svg>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
