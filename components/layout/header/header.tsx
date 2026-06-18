@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <motion.div
         variants={animations.fadeDown}
-        className="fixed top-5 md:left-1/2 md:-translate-x-1/2 z-50 w-[calc(100%-20px)]  bg-white shadow-lg rounded-[55px] "
+        className="fixed top-5 md:left-1/2 md:-translate-x-1/2 z-50 w-[calc(100%-20px)] max-w-5xl  bg-white shadow-lg rounded-[55px] "
       >
         <div className="p-3">
           <div className="flex items-center justify-between">

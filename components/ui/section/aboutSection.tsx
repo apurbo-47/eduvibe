@@ -5,7 +5,7 @@ import Image from "next/image";
 const AboutSection = () => {
   return (
     <motion.section
-      variants={animations.fadeUp}
+      variants={animations.stagger}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}

@@ -1,11 +1,19 @@
 "use client";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { animations } from "@/components/animations/animation";
 
 export default function ProgramHero() {
   return (
-    <section className="w-full min-h-150 overflow-hidden bg-[#F6F6FA] bg-grid-pattern">
-      <div className="grid lg:grid-cols-2 w-full max-w-350 mx-auto">
+    <motion.section
+      variants={animations.stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      className="w-full min-h-screen overflow-hidden bg-[#F6F6FA] bg-grid-pattern"
+    >
+      <div className="grid lg:grid-cols-2 w-full max-w-330 mx-auto">
         {/* LEFT SIDE */}
         <div className="pt-26 md:pt-32">
           <div
@@ -16,31 +24,44 @@ export default function ProgramHero() {
             <div className="absolute inset-0 opacity-20 bg-[linear-gradient(#ffffff22_1px,transparent_1px),linear-gradient(90deg,#ffffff22_1px,transparent_1px)] bg-size-[40px_40px]" />
 
             <div className="relative z-10 max-w-2xl p-5 md:p-16 ">
-              <p className="text-xl md:text-2xl mb-5 md:mb-8 font-serif">
+              <motion.p
+                variants={animations.fadeUp}
+                className="text-xl md:text-2xl mb-5 md:mb-8 font-serif"
+              >
                 Program
-              </p>
+              </motion.p>
 
-              <h1 className="text-2xl md:text-[54px] font-bold leading-tight mb-2.5 md:mb-5">
+              <motion.h1
+                variants={animations.fadeUp}
+                className="text-2xl md:text-[54px] font-bold leading-tight mb-2.5 md:mb-5"
+              >
                 Discover Our University Programs
-              </h1>
+              </motion.h1>
 
-              <p className="text-xs md:text-base opacity-80 mb-4 md:mb-8">
+              <motion.p
+                variants={animations.fadeUp}
+                className="text-xs md:text-base opacity-80 mb-4 md:mb-8"
+              >
                 Our academic programs are carefully designed to combine strong
                 theoretical foundations with practical learning experiences.
                 Taught by experienced faculty and aligned with industry needs,
                 each program prepares students with the knowledge, skills, and
                 confidence to succeed in a global environment.
-              </p>
+              </motion.p>
 
-              <button className="flex items-center gap-3 md:text-lg text-sm bg-white text-black px-3 py-2 md:px-5 md:py-3 rounded-full font-medium hover:scale-105 transition cursor-pointer hover:bg-[#00A991] hover:text-white">
+              <motion.button
+                variants={animations.fadeUp}
+                className="flex items-center gap-3 md:text-lg text-sm bg-white text-black px-3 py-2 md:px-5 md:py-3 rounded-full font-medium hover:scale-105 transition cursor-pointer hover:bg-[#00A991] hover:text-white"
+              >
                 Explore Program
                 <span className=" p-1 md:p-2 rounded-full">
                   <ArrowUpRight size={16} />
                 </span>
-              </button>
+              </motion.button>
             </div>
 
             {/* Decorative book icons */}
+
             <Image
               src="/images/d.png"
               width={100}
@@ -60,26 +81,44 @@ export default function ProgramHero() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="relative  flex items-center justify-center  pt-5 md:pt-36 ">
+        <motion.div
+          variants={animations.stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative  flex items-center justify-center  pt-5 md:pt-36 "
+        >
           {/* Student Image */}
-          <Image
-            src="/images/student.png"
-            width={520}
-            height={520}
-            alt="students"
-            className="w-full h-full relative  object-fill "
-          />
+          <motion.div variants={animations.fadeLeft}>
+            <Image
+              src="/images/student.png"
+              width={520}
+              height={520}
+              alt="students"
+              className="w-full h-full relative  object-fill "
+            />
+          </motion.div>
 
-          <Image
-            src="/images/cap.png"
-            width={100}
-            height={100}
-            alt="icon"
-            className="w-16 h-16 md:w-32 md:h-32 absolute top-8 right-3 md:top-34 md:right-10 object-cover rotate-23 opacity-70 "
-          />
+          <motion.div
+            variants={animations.fadeLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <Image
+              src="/images/cap.png"
+              width={100}
+              height={100}
+              alt="icon"
+              className="w-16 h-16 md:w-32 md:h-32 absolute top-8 right-3 md:top-34 md:right-10 object-cover rotate-23 opacity-70 "
+            />
+          </motion.div>
 
           {/* Floating tag 1 */}
-          <div className="absolute top-4  md:top-38 left-7 md:left-15 ">
+          <motion.div
+            variants={animations.fadeDown}
+            className="absolute top-4  md:top-38 left-7 md:left-15 "
+          >
             <Image
               src="/images/knowledge.png"
               alt="btn"
@@ -87,14 +126,17 @@ export default function ProgramHero() {
               height={71}
               className=" w-20 h-10 md:w-36 md:h-20"
             />
-          </div>
+          </motion.div>
 
           {/* Floating tag 2 */}
-          <div className="absolute bottom-0 -left-24 md:bottom-32 md:-left-20 z-10 hidden md:block ">
+          <motion.div
+            variants={animations.fadeUp}
+            className="absolute bottom-0 -left-24 md:bottom-32 md:-left-20 z-10 hidden md:block "
+          >
             <Image src="/images/inno.png" alt="btn" width={140} height={71} />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
