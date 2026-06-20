@@ -1,15 +1,35 @@
 import Image from "next/image";
+import * as motion from "framer-motion/client";
 import React from "react";
+import { animations } from "../animations/animation";
 
 const Address = () => {
   return (
-    <div className="w-full max-w-330 mx-auto p-5 md:p-16 rounded-xl bg-[#F5F7FA]">
-      <div className="max-w-xl mx-auto text-center font-bold mb-6 md:mb-13">
-        <h1 className=" text-2xl md:text-5xl">Our Campus Address & Contact </h1>
-      </div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={animations.stagger}
+      className="w-full max-w-330 mx-auto p-5 md:p-16 rounded-xl bg-[#F5F7FA]"
+    >
+      <motion.div
+        variants={animations.fadeUp}
+        className="max-w-xl mx-auto text-center font-bold mb-6 md:mb-13"
+      >
+        <h1 className="text-2xl md:text-5xl">Our Campus Address & Contact</h1>
+      </motion.div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-5">
-        <div className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={animations.stagger}
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-5"
+      >
+        <motion.div
+          variants={animations.fadeUp}
+          className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl"
+        >
           <div className="flex items-center justify-center bg-[#F2EFFF] w-16 h-16 md:w-20 md:h-20 rounded-full">
             <Image
               src="/images/bx.png"
@@ -25,9 +45,12 @@ const Address = () => {
           <p className="text-[#4C4C4C] text-xs md:text-base mt-2.5 md:mt-4">
             (852) 749-9581,
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl">
+        <motion.div
+          variants={animations.fadeUp}
+          className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl"
+        >
           <div className="flex items-center justify-center bg-[#F2EFFF] w-16 h-16 md:w-20 md:h-20 rounded-full">
             <Image
               src="/images/fluent.png"
@@ -43,9 +66,12 @@ const Address = () => {
           <p className="text-[#4C4C4C] text-xs md:text-base mt-2.5 md:mt-4">
             (522) 685-8547
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl">
+        <motion.div
+          variants={animations.fadeUp}
+          className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl"
+        >
           <div className="flex items-center justify-center bg-[#F2EFFF] w-16 h-16 md:w-20 md:h-20 rounded-full">
             <Image
               src="/images/bx.png"
@@ -59,9 +85,12 @@ const Address = () => {
           <p className="text-[#4C4C4C] text-xs md:text-base mt-2.5 md:mt-4">
             www.eduvibe.com
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl">
+        <motion.div
+          variants={animations.fadeUp}
+          className="bg-white p-3 md:p-6 text-center flex flex-col items-center justify-center shadow rounded-2xl"
+        >
           <div className="flex items-center justify-center bg-[#F2EFFF] w-16 h-16 md:w-20 md:h-20 rounded-full">
             <Image
               src="/images/bx.png"
@@ -77,9 +106,9 @@ const Address = () => {
           <p className="text-[#4C4C4C] text-xs md:text-base mt-2.5 md:mt-4">
             www.eduvibe.com
           </p>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

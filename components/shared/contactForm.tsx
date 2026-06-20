@@ -1,7 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { animations } from "../animations/animation";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -19,7 +21,6 @@ export default function ContactForm() {
       ...form,
       [e.target.name]: e.target.value,
     });
-    // console.log(e.target.value);
   };
 
   const validatePhone = (phone: string) => {
@@ -49,17 +50,45 @@ export default function ContactForm() {
 
   return (
     <section className="bg-white pt-8 pb-8 md:pb-20 px-4">
-      <div className="max-w-4xl mx-auto bg-white relative rounded-2xl border border-t-4 border-t-[#7A60FF] border-white shadow-lg p-5 md:p-8 -mt-30 md:-mt-70">
+      <motion.div
+        variants={animations.fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-4xl mx-auto bg-white relative rounded-2xl border border-t-4 border-t-[#7A60FF] border-white shadow-lg p-5 md:p-8 -mt-30 md:-mt-70"
+      >
         {/* Title */}
-        <h2 className="text-2xl md:text-4xl text-[#333333] font-semibold mb-2 md:mb-4">
+        <motion.h2
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-2xl md:text-4xl text-[#333333] font-semibold mb-2 md:mb-4"
+        >
           Send us a message
-        </h2>
-        <p className="text-[#4C4C4C] text-sm md:text-lg mb-4 md:mb-8 max-w-xl">
+        </motion.h2>
+
+        <motion.p
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="text-[#4C4C4C] text-sm md:text-lg mb-4 md:mb-8 max-w-xl"
+        >
           Have a question, request, or emergency need? Our team is here to help.
           Reach out anytime and well respond promptly.
-        </p>
+        </motion.p>
 
-        <form onSubmit={handleSubmit} className=" space-y-2 md:space-y-6">
+        <motion.form
+          variants={animations.fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          onSubmit={handleSubmit}
+          className="space-y-2 md:space-y-6"
+        >
           {/* Name */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
@@ -153,8 +182,8 @@ export default function ContactForm() {
               <span className="-rotate-45">➜</span>
             </button>
           </div>
-        </form>
-      </div>
+        </motion.form>
+      </motion.div>
     </section>
   );
 }
