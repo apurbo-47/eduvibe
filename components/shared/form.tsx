@@ -81,7 +81,7 @@ const Form = () => {
   };
 
   return (
-    <div className="md:p-0 p-5">
+    <div className="md:p-0 p-5 mt-20">
       <div className="max-w-4xl mx-auto  mb-7 md:mb-16 bg-white relative rounded-2xl border border-t-4 border-t-[#7A60FF] border-white shadow-lg p-5 md:p-8 ">
         <form onSubmit={handleSubmit} className="  space-y-2 md:space-y-6">
           {inputRows.map((row, rowIndex) => (
