@@ -4,6 +4,7 @@ import ContactHero from "@/components/shared/contactHero";
 import Form from "@/components/shared/form";
 import HeroSection from "@/components/shared/heroSection";
 import MapSection from "@/components/shared/mapSection";
+import Content from "@/components/ui/content";
 import MovingMiddleCardSection from "@/components/ui/movingMiddleCardSection";
 // import OTPWithSuccess from "@/components/shared/Otp";
 import React from "react";
@@ -21,6 +22,7 @@ const ContactPage = () => {
       <MovingMiddleCardSection />
 
       <Form />
+      <Content />
     </div>
   );
 };

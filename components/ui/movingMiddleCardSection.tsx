@@ -95,7 +95,7 @@ export default function MovingCenterCardSection() {
             y,
             scale,
           }}
-          className=" absolute left-1/2 top-0 -translate-x-1/2 z-30 pointer-events-none"
+          className=" absolute left-1/2 top-0 -translate-x-1/2  z-30 pointer-events-none"
         >
           <Image
             src={slide_img}
