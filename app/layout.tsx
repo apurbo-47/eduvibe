@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer/footer";
 import ToastProvider from "@/components/layout/toastProvider";
 import LenisProvider from "@/components/provider/lenisProvider";
+import CustomCursor from "@/components/ui/Cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LenisProvider>
+          <CustomCursor />
           <Navbar />
           {children}
           <ToastProvider />

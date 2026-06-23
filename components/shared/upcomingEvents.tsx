@@ -27,7 +27,7 @@ const initialEvents = [
     img: "/images/event.png",
     location: "⏱ London, US",
     time: "⏱ 8.00 am - 6.00 pm",
-    title: "Week long Welcoming New Students, Including Tours",
+    title: "Welcoming New Students",
     date: "10 Jan 2026",
   },
   {
