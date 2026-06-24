@@ -11,7 +11,7 @@ export default function LenisProvider({ children }: Props) {
     <ReactLenis
       root
       options={{
-        duration: 1,
+        duration: 1.2,
         smoothWheel: true,
         syncTouch: true,
         touchMultiplier: 1.1,

@@ -6,6 +6,7 @@ import HeroSection from "@/components/shared/heroSection";
 import MapSection from "@/components/shared/mapSection";
 import Content from "@/components/ui/content";
 import MovingMiddleCardSection from "@/components/ui/movingMiddleCardSection";
+import ProductFlightSection from "@/components/ui/ProductTransitionSection";
 // import OTPWithSuccess from "@/components/shared/Otp";
 import React from "react";
 
@@ -23,6 +24,7 @@ const ContactPage = () => {
 
       <Form />
       <Content />
+      <ProductFlightSection />
     </div>
   );
 };
