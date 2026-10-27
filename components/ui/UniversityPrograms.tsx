@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import ProgramCard from "../../interfaces/programCard";
-import { programs } from "@/constants/programe";
+import ProgramCard from "@/components/cards/ProgramCard";
+import { programs } from "@/constants/program";
 import { motion } from "framer-motion";
 import { animations } from "../animations/animation";
 

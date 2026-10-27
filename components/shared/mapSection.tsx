@@ -13,8 +13,8 @@ export default function MapSection() {
   });
 
   return (
-    <section ref={ref} className="w-full bg-white">
-      <div className="relative w-full h-[500px] md:h-screen overflow-hidden shadow-lg">
+    <section ref={ref} className="w-full bg-white lg:mt-20 mt-10">
+      <div className="relative w-full h-125 md:h-screen overflow-hidden shadow-lg">
         {isInView && (
           <>
             {!interactive && (

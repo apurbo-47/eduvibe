@@ -9,7 +9,7 @@ import FeatureLanding from "./FeatureLanding";
 import FeatureCards from "./FeatureCards";
 
 import bookImage from "@/assets/images/book.jpg";
-import { useBookFlight } from "@/interfaces/useBookFlight";
+import { useBookFlight } from "@/hooks/useBookFlight";
 
 export default function ProductStorySection() {
   const containerRef = useRef<HTMLDivElement>(null);

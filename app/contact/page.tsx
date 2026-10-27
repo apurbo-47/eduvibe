@@ -7,6 +7,7 @@ import MapSection from "@/components/shared/mapSection";
 import Content from "@/components/ui/content";
 import MovingMiddleCardSection from "@/components/ui/movingMiddleCardSection";
 import ProductFlightSection from "@/components/ui/ProductTransitionSection";
+import StickyVideoCard from "@/components/ui/StickyVideoCard";
 // import OTPWithSuccess from "@/components/shared/Otp";
 import React from "react";
 
@@ -20,11 +21,16 @@ const ContactPage = () => {
       <HeroSection />
 
       {/* <OTPWithSuccess /> */}
-      <MovingMiddleCardSection />
+      {/* <MovingMiddleCardSection /> */}
 
-      <Form />
-      <Content />
-      <ProductFlightSection />
+      {/* <Form /> */}
+      {/* <Content /> */}
+      {/* <ProductFlightSection /> */}
+      {/* <StickyVideoCard
+        title="Creative Studio"
+        description="We build immersive digital experiences with premium animation and interaction."
+        video="/videos/hero.mp4"
+      /> */}
     </div>
   );
 };
